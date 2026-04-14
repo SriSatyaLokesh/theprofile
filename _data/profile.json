@@ -2,6 +2,7 @@
   "theme_config": {
     "mode": "dark",
     "vanta_effect": "birds",
+    "vanta_magic": true,
     "colors": {
       "primary": "#0d1117",
       "secondary": "#161b22",

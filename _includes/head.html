@@ -16,6 +16,10 @@
     --color-primary:   {{ site.data.profile.theme_config.colors.primary   | default: '#0d1117' }};
     --color-secondary: {{ site.data.profile.theme_config.colors.secondary | default: '#161b22' }};
     --color-accent:    {{ site.data.profile.theme_config.colors.accent    | default: '#58a6ff' }};
+    
+    /* Derived Tokens (Liquid + CSS) */
+    --color-accent-subtle: color-mix(in srgb, var(--color-accent) 15%, transparent);
+    --color-border-glamour: color-mix(in srgb, var(--color-accent) 25%, var(--color-border, #30363d));
   }
 </style>
 <script>

@@ -1,0 +1,30 @@
+<section id="education" class="education section-wrapper" aria-label="Education">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="education__list">
+      {% for edu in site.data.profile.education %}
+        <article class="education__item" style="animation-delay: {{ forloop.index0 | times: 150 }}ms">
+          <div class="education__header">
+            <h3 class="education__degree">{{ edu.degree }}</h3>
+            <span class="education__year">{{ edu.year }}</span>
+          </div>
+          <span class="education__institution">{{ edu.institution }}</span>
+          
+          {% if edu.description %}
+            {% if edu.description[0] %}
+              <ul class="experience__description-list">
+                {% for point in edu.description %}
+                  <li>{{ point }}</li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p class="experience__description">{{ edu.description }}</p>
+            {% endif %}
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

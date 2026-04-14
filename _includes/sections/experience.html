@@ -1,0 +1,32 @@
+<section id="experience" class="experience section-wrapper" aria-label="Work Experience">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="experience__list">
+      {% for exp in site.data.profile.experience %}
+        <article class="experience__item">
+          <div class="experience__header">
+            <h3 class="experience__role">{{ exp.role }}</h3>
+            <span class="experience__duration">{{ exp.duration }}</span>
+          </div>
+          {% if exp.company_url and exp.company_url != "" %}
+          <a href="{{ exp.company_url }}" class="experience__company" target="_blank" rel="noopener">{{ exp.company }}</a>
+          {% else %}
+          <span class="experience__company">{{ exp.company }}</span>
+          {% endif %}
+          
+          {% if exp.description[0] %}
+            <ul class="experience__description-list">
+              {% for point in exp.description %}
+                <li>{{ point }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p class="experience__description">{{ exp.description }}</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+<section id="skills" class="section-wrapper skills" aria-label="Skills">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Skills</h2>
+    </div>
+
+    <div class="skills-bento-grid">
+      {% assign skills_count = site.data.profile.skills | size %}
+      {% for skill_cat in site.data.profile.skills %}
+        {% assign idx = forloop.index %}
+        {% capture size_class %}
+          {% if skills_count == 1 %}
+            span-12
+          {% elsif skills_count == 2 %}
+            span-6
+          {% elsif skills_count == 3 %}
+            {% case idx %}
+              {% when 1 %}span-6
+              {% when 2 %}span-6
+              {% when 3 %}span-12
+            {% endcase %}
+          {% elsif skills_count == 4 %}
+            {% case idx %}
+              {% when 1 %}span-8
+              {% when 2 %}span-4
+              {% when 3 %}span-4
+              {% when 4 %}span-8
+            {% endcase %}
+          {% else %}
+            {% cycle 'span-8', 'span-4', 'span-12', 'span-6', 'span-6' %}
+          {% endif %}
+        {% endcapture %}
+        {% assign size_class = size_class | strip %}
+
+        <article class="skills-card skills-card--{{ size_class }}">
+          <div class="skills-card__content">
+            <h3 class="skills-card__category">{{ skill_cat.category }}</h3>
+            <div class="skills-card__list">
+              {% for item in skill_cat.items %}
+                {% assign item_idx = forloop.index0 %}
+                {% assign logo = skill_cat.logos[item_idx] %}
+                {% if logo == "amazonwebservices" %}{% assign logo = "amazonaws" %}{% endif %}
+                {% include tech_chip.html label=item logo=logo %}
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

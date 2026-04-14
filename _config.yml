@@ -18,6 +18,7 @@ exclude:
   - CONTRIBUTING.md
   - PROJECT_RULES.md
   - SUPERPOWER-STYLE.md
+  - CLAUDE.md
   - docs/
   - skills/
   - .agent/

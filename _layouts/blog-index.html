@@ -10,24 +10,45 @@ layout: default
     </div>
 
     <div class="blog-grid">
+      {% assign featured_post = site.posts | where: "featured", true | first %}
+      {% if featured_post %}
+        <article class="blog-card blog-card--featured">
+          <a href="{{ featured_post.url | relative_url }}" class="blog-card__link">
+            <div class="blog-card__content interactive-glow">
+              <div class="blog-card__image-wrap">
+                <img src="{{ featured_post.image | relative_url | default: '/assets/placeholder-blog.png' }}" alt="{{ featured_post.title }}" class="blog-card__image" loading="lazy">
+              </div>
+              <div class="blog-card__meta">
+                <span class="badge badge--featured">Featured Insight</span>
+                <time datetime="{{ featured_post.date | date_to_xmlschema }}" class="blog-card__date">
+                  {{ featured_post.date | date: "%B %d, %Y" }}
+                </time>
+              </div>
+              <h2 class="blog-card__title">{{ featured_post.title }}</h2>
+              <p class="blog-card__excerpt">{{ featured_post.excerpt | strip_html | truncatewords: 45 }}</p>
+              <div class="blog-card__footer">
+                <span class="blog-card__cta">Deep Dive</span>
+                <svg class="icon icon--arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </article>
+      {% endif %}
+
       {% for post in site.posts %}
-        {% assign idx = forloop.index %}
-        {% assign items_count = site.posts | size %}
+        {% if post.id == featured_post.id %}{% continue %}{% endif %}
         
-        {% capture bento_class %}
-          {% if items_count == 1 %}
-            span-12
-          {% elsif items_count == 2 %}
-            span-6
-          {% else %}
-            {% cycle 'span-8', 'span-4', 'span-12', 'span-6', 'span-6' %}
-          {% endif %}
-        {% endcapture %}
+        {% capture bento_class %}{% cycle 'span-8', 'span-4', 'span-6', 'span-6', 'span-12' %}{% endcapture %}
         {% assign bento_class = bento_class | strip %}
 
-        <article class="blog-card blog-card--{{ bento_class }} interactive-glow">
+        <article class="blog-card blog-card--{{ bento_class }}">
           <a href="{{ post.url | relative_url }}" class="blog-card__link">
-            <div class="blog-card__content">
+            <div class="blog-card__content interactive-glow">
+              <div class="blog-card__image-wrap">
+                <img src="{{ post.image | relative_url | default: '/assets/placeholder-blog.png' }}" alt="{{ post.title }}" class="blog-card__image" loading="lazy">
+              </div>
               <div class="blog-card__meta">
                 <time datetime="{{ post.date | date_to_xmlschema }}" class="blog-card__date">
                   {{ post.date | date: "%B %d, %Y" }}

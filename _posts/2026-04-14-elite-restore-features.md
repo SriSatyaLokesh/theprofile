@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Exploring Elite Restoration: GSAP, Vanta, and Glassmorphism"
-date: 2026-04-13 09:00:00 +0530
-description: "A technical deep-dive into the design system that makes DevFolio stand apart from generic templates."
+date: 2026-04-13 14:00:00 +0530
+description: "The technical story behind the restoration of the Elite 2026 design language."
+image: "assets/img/blog-restoration.png"
 ---
 
 The world of static sites can often feel, well... *static*. With the **Elite Restoration** update, we aimed to bridge the gap between static performance and premium, interactive aesthetics.

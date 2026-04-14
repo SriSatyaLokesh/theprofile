@@ -2,10 +2,21 @@
 layout: default
 ---
 
+<div class="reading-progress" aria-hidden="true">
+  <div class="reading-progress__bar" id="reading-progress"></div>
+</div>
+
 <article class="post">
   <header class="post-hero">
-    <div class="container container--narrow">
+    <div class="container container--immersive">
+      {% if page.image %}
+        <div class="post-featured-image interactive-glow">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy">
+        </div>
+      {% endif %}
+
       <div class="post-meta">
+        <span class="badge">Article</span>
         <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
           {{ page.date | date: "%B %d, %Y" }}
         </time>
@@ -25,12 +36,30 @@ layout: default
     </div>
   </header>
 
-  <div class="container container--narrow">
+  <div class="container container--immersive">
     <div class="post-content card glass">
       {{ content }}
     </div>
 
     <footer class="post-footer">
+      <div class="post-recommendations">
+        <h3 class="post-recommendations__title">Explore More Insights</h3>
+        <div class="blog-grid blog-grid--mini">
+          {% assign related_posts = site.posts | where_exp: "item", "item.id != page.id" | sample: 3 %}
+          {% for post in related_posts %}
+            <article class="blog-card blog-card--span-4">
+              <a href="{{ post.url | relative_url }}" class="blog-card__link">
+                <div class="blog-card__content interactive-glow">
+                  <div class="blog-card__image-wrap">
+                    <img src="{{ post.image | relative_url | default: '/assets/placeholder-blog.png' }}" alt="{{ post.title }}" class="blog-card__image" loading="lazy">
+                  </div>
+                  <h4 class="blog-card__title">{{ post.title }}</h4>
+                </div>
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
       <div class="post-pagination">
         {% if page.previous %}
           <a href="{{ page.previous.url | relative_url }}" class="post-pagination__link post-pagination__link--prev">

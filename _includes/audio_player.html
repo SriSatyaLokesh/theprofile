@@ -1,0 +1,74 @@
+{% assign music = site.data.profile.theme_config.music %}
+{% if music.enabled %}
+<audio id="bg-music" loop preload="auto">
+  <source src="{{ music.file | relative_url }}" type="audio/mpeg">
+</audio>
+
+<script>
+  (function() {
+    const audio = document.getElementById('bg-music');
+    const targetVolume = {{ music.max_volume | default: 0.3 }};
+    let hasStarted = false;
+
+    // Fade volume using GSAP
+    window.fadeAudio = function(toVolume, duration = 1.5) {
+      if (!audio) return;
+      gsap.to(audio, {
+        volume: toVolume,
+        duration: duration,
+        ease: "power2.inOut",
+        onStart: () => {
+          if (toVolume > 0 && audio.paused) audio.play();
+        },
+        onComplete: () => {
+          if (toVolume === 0) audio.pause();
+          updateSoundToggleUI();
+        }
+      });
+    };
+
+    window.toggleSound = function() {
+      if (!audio) return;
+      if (audio.paused) {
+        window.fadeAudio(targetVolume, 2);
+      } else {
+        window.fadeAudio(0, 1);
+      }
+    };
+
+    function startCinematicExperience() {
+      if (hasStarted) return;
+      hasStarted = true;
+      
+      audio.volume = 0;
+      audio.play().then(() => {
+        // Successful play - start 5s cinematic fade
+        window.fadeAudio(targetVolume, 5);
+      }).catch(err => {
+        console.warn("Autoplay blocked, waiting for next interaction or toggle.");
+        hasStarted = false; // Reset to try again on next click
+      });
+
+      // Cleanup listeners
+      ['click', 'mousedown', 'keydown', 'touchstart'].forEach(evt => {
+        document.removeEventListener(evt, startCinematicExperience);
+      });
+    }
+
+    // Modern mobile/desktop safety: wait for first interaction
+    ['click', 'mousedown', 'keydown', 'touchstart'].forEach(evt => {
+      document.addEventListener(evt, startCinematicExperience, { once: true });
+    });
+
+    function updateSoundToggleUI() {
+      const btn = document.getElementById('sound-toggle');
+      if (!btn) return;
+      if (audio.paused || audio.volume === 0) {
+        btn.classList.add('is-muted');
+      } else {
+        btn.classList.remove('is-muted');
+      }
+    }
+  })();
+</script>
+{% endif %}

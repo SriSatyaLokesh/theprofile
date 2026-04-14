@@ -7,6 +7,11 @@
       "primary": "#0d1117",
       "secondary": "#161b22",
       "accent": "#58a6ff"
+    },
+    "music": {
+      "enabled": true,
+      "file": "/assets/music/interstellar.mp3",
+      "max_volume": 0.3
     }
   },
 

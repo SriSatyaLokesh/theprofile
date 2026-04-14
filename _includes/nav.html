@@ -18,6 +18,24 @@
     </ul>
 
     <div class="nav__actions">
+      <!-- Cinematic Sound Toggle -->
+      {% if site.data.profile.theme_config.music.enabled %}
+      <button
+        id="sound-toggle"
+        class="nav__sound-toggle"
+        onclick="window.toggleSound()"
+        aria-label="Toggle background music"
+        title="Toggle Sound"
+      >
+        <div class="wavelength">
+          <span class="wavelength__bar"></span>
+          <span class="wavelength__bar"></span>
+          <span class="wavelength__bar"></span>
+          <span class="wavelength__bar"></span>
+        </div>
+      </button>
+      {% endif %}
+
       <!-- Dark/Light mode toggle -->
       <button
         id="theme-toggle"

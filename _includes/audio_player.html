@@ -40,10 +40,24 @@
       if (hasStarted) return;
       hasStarted = true;
       
-      audio.volume = 0;
+      audio.volume = 0.5; // Start at audible 50%
       audio.play().then(() => {
-        // Successful play - start 5s cinematic fade
-        window.fadeAudio(targetVolume, 5);
+        // High-Fidelity Cinematic Ramp
+        const tl = gsap.timeline({
+          onComplete: () => updateSoundToggleUI()
+        });
+
+        tl.to(audio, {
+          volume: 0.8,
+          duration: 5,
+          ease: "power2.out"
+        })
+        .to(audio, {
+          volume: targetVolume,
+          duration: 15,
+          ease: "power1.inOut"
+        });
+
       }).catch(err => {
         console.warn("Autoplay blocked, waiting for next interaction or toggle.");
         hasStarted = false; // Reset to try again on next click

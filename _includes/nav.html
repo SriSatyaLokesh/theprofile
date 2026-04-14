@@ -1,7 +1,11 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="container nav__inner">
     <a href="{{ '/' | relative_url }}#hero" class="nav__brand">
-      {{ site.data.profile.name }}
+      {% if site.data.profile.theme_config.use_logo_image %}
+        <img src="{{ site.data.profile.theme_config.nav_bar_logo_url | relative_url }}" alt="Logo" class="nav__logo-img">
+      {% else %}
+        {{ site.data.profile.name }}
+      {% endif %}
     </a>
 
     <ul class="nav__links" role="list" id="nav-links">

@@ -241,7 +241,15 @@ a { color: var(--color-accent); text-decoration: none; transition: var(--transit
 .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 var(--s-5); }
 .nav__brand { 
   font-weight: 700; font-size: 1.15rem; color: var(--color-text); letter-spacing: -0.02em; transition: var(--transition);
+  display: flex; align-items: center; gap: var(--s-2);
   &:hover { text-shadow: var(--glow-accent); color: var(--color-accent); transform: scale(1.02); } 
+}
+
+.nav__logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav__links { 

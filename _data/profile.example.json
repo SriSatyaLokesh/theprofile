@@ -1,0 +1,121 @@
+{
+  "_________ DEVFOLIO — PROFILE CONFIGURATION _________": "Copy this file to _data/profile.json and fill in your details. Remove all comment keys (lines starting with _).",
+
+  "__ THEME __": "Controls the visual appearance of your portfolio.",
+  "theme_config": {
+    "__ mode __": "Set your site's color mode. Accepted values: 'dark' or 'light'. Default: 'dark'.",
+    "mode": "light",
+
+    "__ vanta_effect __": "The animated background effect on your Hero section. Accepted values: 'net', 'waves', 'rings', 'fog', 'birds', 'clouds'. Set to empty string '' to disable Vanta entirely.",
+    "vanta_effect": "birds",
+
+    "__ colors __": "Your three-color palette. All hex values INCLUDE the # prefix here.",
+    "colors": {
+      "__ primary __": "Main page background color.",
+      "primary": "#0d1117",
+      "__ secondary __": "Card and nav panel background color.",
+      "secondary": "#161b22",
+      "__ accent __": "Links, highlights, Vanta animation color, and CTA buttons.",
+      "accent": "#58a6ff"
+    }
+  },
+
+  "__ PERSONAL __": "Your name and headline are displayed in the Hero and nav bar.",
+  "name": "Your Full Name",
+  "headline": "Your Role · Your Speciality",
+
+  "__ profile_image_url __": "MUST be a full HTTPS URL to an external image. No local files. GitHub avatar URL works great: https://avatars.githubusercontent.com/u/YOUR_USER_ID",
+  "profile_image_url": "https://avatars.githubusercontent.com/u/0",
+
+  "__ bio __": "A short paragraph about yourself shown in the Profile section. 2-4 sentences recommended.",
+  "bio": "A passionate developer who loves building things. Write something genuine here.",
+
+  "__ SOCIAL LINKS __": "Displayed as Shields.io badges in the Contact section. Add or remove entries freely.",
+  "social": [
+    {
+      "__ platform __": "Display name of the platform. Used as the badge label.",
+      "platform": "GitHub",
+      "__ url __": "Full URL to your profile on this platform.",
+      "url": "https://github.com/yourusername",
+      "__ logo __": "Simple Icons slug for the platform logo. Browse slugs at https://simpleicons.org",
+      "logo": "github",
+      "__ color __": "WARNING: Hex color WITHOUT the # prefix. This is the Shields.io format. Example: '181717' not '#181717'.",
+      "color": "181717"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/yourprofile",
+      "logo": "linkedin",
+      "color": "0A66C2"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/yourusername",
+      "logo": "twitter",
+      "color": "1DA1F2"
+    }
+  ],
+
+  "__ EXPERIENCE __": "Your work history in reverse chronological order (most recent first).",
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "Company Name",
+      "__ company_url __": "URL to the company website. Used to hyperlink the company name.",
+      "company_url": "https://companywebsite.com",
+      "__ duration __": "Free-form text. Example: 'Jan 2023 – Present' or 'Jun 2021 – Dec 2022'.",
+      "duration": "Jan 2023 – Present",
+      "__ description __": "Can be a single string (paragraph) OR an array of strings (bullet points).",
+      "description": [
+        "Led the frontend team to migrate the legacy app to Next.js.",
+        "Improved Core Web Vitals by 40% across the board.",
+        "Mentored 3 junior developers."
+      ]
+    }
+  ],
+
+  "__ EDUCATION __": "Your academic background.",
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science",
+      "institution": "University Name",
+      "__ year __": "Graduation year as a string.",
+      "year": "2023"
+    }
+  ],
+
+  "__ PROJECTS __": "WARNING: Maximum 6 projects. Any entries beyond the 6th are SILENTLY IGNORED by the template.",
+  "projects": [
+    {
+      "title": "Project Name",
+      "description": "One to two sentences describing what this project does and why it matters.",
+
+      "__ image_url __": "Full HTTPS URL to a project screenshot or preview image. Recommended size: 1200×630px. Set to empty string to skip the image.",
+      "image_url": "/assets/img/projects/project1.jpg",
+
+      "__ stack / stack_colors / stack_logos __": "CRITICAL: These THREE arrays MUST be the SAME LENGTH. They are parallel arrays — index 0 of stack pairs with index 0 of stack_colors and index 0 of stack_logos. If lengths differ, extra items will render with no color or logo.",
+      "stack":        ["React",    "TypeScript", "Node.js" ],
+      "stack_colors": ["61DAFB",   "3178C6",     "339933"  ],
+      "stack_logos":  ["react",    "typescript", "nodedotjs"],
+
+      "__ code_url __": "URL to the GitHub repository. Set to empty string '' to hide the GitHub button.",
+      "code_url": "https://github.com/yourusername/project-name",
+
+      "__ live_url __": "URL to the live deployed version. Set to empty string '' to hide the Live Demo button.",
+      "live_url": "https://yourproject.vercel.app"
+    }
+  ],
+
+  "__ RECOMMENDATIONS __": "Testimonials from colleagues. The linkedin_url field is optional — set to empty string '' to hide the LinkedIn button.",
+  "recommendations": [
+    {
+      "__ text __": "The full recommendation text. Direct quotes work best.",
+      "text": "Write the recommendation text here. It will appear as a blockquote.",
+      "name": "Recommender Full Name",
+      "__ title __": "Their job title and company. Displayed below their name.",
+      "title": "Senior Engineer at Company Name",
+      "__ linkedin_url __": "OPTIONAL. If provided, a LinkedIn button links to their profile. Set to '' to hide.",
+      "linkedin_url": "https://linkedin.com/in/theirprofile"
+    }
+  ]
+}

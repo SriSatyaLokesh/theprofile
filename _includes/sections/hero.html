@@ -1,0 +1,23 @@
+<section id="hero" class="hero" aria-label="Hero">
+  <div class="container hero__content">
+    {% if site.data.profile.available_for_work %}
+    <div class="hero__badge">
+      <span class="hero__dot" aria-hidden="true"></span>
+      Available for opportunities
+    </div>
+    {% endif %}
+    
+    <h1 class="hero__name">{{ site.data.profile.name }}</h1>
+    
+    <p class="hero__headline" data-gsap="hero-headline">
+      {{ site.data.profile.headline }}<span class="typing-dots"></span>
+    </p>
+    <div class="hero__cta-group">
+      <a href="{{ site.data.profile.resume_url | default: '#' }}" class="hero__cta hero__cta--primary" target="_blank" rel="noopener noreferrer">
+        View Resume
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </a>
+      <a href="#contact" class="hero__cta hero__cta--secondary">Get in Touch</a>
+    </div>
+  </div>
+</section>

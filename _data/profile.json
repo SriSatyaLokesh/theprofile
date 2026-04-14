@@ -1,0 +1,167 @@
+{
+  "theme_config": {
+    "mode": "dark",
+    "vanta_effect": "birds",
+    "colors": {
+      "primary": "#0d1117",
+      "secondary": "#161b22",
+      "accent": "#58a6ff"
+    }
+  },
+
+  "available_for_work": true,
+
+  "name": "Sri Satya Lokesh",
+  "headline": "Full Stack Developer · Open Source Enthusiast · Builder",
+  "profile_image_url": "https://avatars.githubusercontent.com/u/0",
+  "resume_url": "/assets/resume.pdf",
+  "bio": "I'm a full-stack developer who obsesses over developer experience, clean architecture, and products that scale. I've shipped production systems serving millions of users, led open-source projects with global contributors, and never stop learning. When I'm not deploying, I'm writing, mentoring, or exploring the next tool that changes how we build.",
+
+  "social": [
+    { "platform": "GitHub",    "url": "https://github.com/SriSatyaLokesh",       "logo": "github",       "color": "181717" },
+    { "platform": "LinkedIn",  "url": "https://linkedin.com/in/srisatyalokesh",  "logo": "linkedin",     "color": "0A66C2" },
+    { "platform": "Twitter",   "url": "https://twitter.com/SriSatyaLokesh",      "logo": "twitter",      "color": "1DA1F2" },
+    { "platform": "Dev.to",    "url": "https://dev.to/srisatyalokesh",           "logo": "devdotto",     "color": "0A0A0A" },
+    { "platform": "LeetCode",  "url": "https://leetcode.com/SriSatyaLokesh",    "logo": "leetcode",     "color": "FFA116" }
+  ],
+
+  "experience": [
+    {
+      "role": "Software Engineer II",
+      "company": "Acme Corp",
+      "company_url": "https://acmecorp.com",
+      "duration": "Jan 2025 – Present",
+      "description": [
+        "Architected and deployed a distributed event-streaming pipeline on AWS Kinesis processing 12M+ events/day with sub-50ms p99 latency.",
+        "Led a cross-functional squad of 6 engineers to migrate a monolith to domain-driven microservices — reducing deployment time from 40 min to under 4 min.",
+        "Introduced a comprehensive E2E testing framework with Playwright, reducing critical regressions by 70% across all CI runs.",
+        "Mentored 2 junior engineers via weekly code reviews and pair programming sessions, accelerating their growth to mid-level in under 8 months."
+      ]
+    },
+    {
+      "role": "Software Engineer I",
+      "company": "Acme Corp",
+      "company_url": "https://acmecorp.com",
+      "duration": "Jan 2024 – Dec 2024",
+      "description": [
+        "Built and scaled RESTful microservices in Node.js + PostgreSQL handling 10M+ requests/day with 99.97% uptime SLA.",
+        "Designed and implemented an internal CLI tool (published to npm) used by 40+ engineers to scaffold service boilerplate in seconds.",
+        "Optimized database query plans, reducing average API response time by 35% on the critical checkout path.",
+        "Owned the on-call rotation for three production services and resolved 15+ P0 incidents with RCAs."
+      ]
+    },
+    {
+      "role": "Frontend Developer Intern",
+      "company": "StartupXYZ",
+      "company_url": "https://startupxyz.io",
+      "duration": "Jun 2023 – Dec 2023",
+      "description": [
+        "Rebuilt the customer dashboard from scratch in React 18 + TypeScript, cutting bundle size by 48% with code splitting and tree-shaking.",
+        "Improved Core Web Vitals scores (LCP, CLS, FID) by 40% — directly contributing to a 12% improvement in organic search ranking.",
+        "Shipped 3 major feature releases in 6 months in an agile team of 8, consistently meeting sprint commitments.",
+        "Collaborated with UX designers to implement a fully accessible (WCAG 2.1 AA) component library from Figma specs."
+      ]
+    }
+  ],
+
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      "logos": ["react", "nextdotjs", "typescript", "tailwindcss"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express", "Go", "PostgreSQL"],
+      "logos": ["nodedotjs", "express", "go", "postgresql"]
+    },
+    {
+      "category": "DevOps & Cloud",
+      "items": ["AWS", "Docker", "Kubernetes", "GitHub Actions"],
+      "logos": ["amazonwebservices", "docker", "kubernetes", "githubactions"]
+    },
+    {
+      "category": "Tools",
+      "items": ["Git", "Figma", "Playwright", "Postman"],
+      "logos": ["git", "figma", "playwright", "postman"]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science & Engineering",
+      "institution": "XYZ University",
+      "year": "2024",
+      "description": [
+        "Graduated with First Class Distinction — CGPA 8.9/10.",
+        "Published undergraduate research on distributed consensus algorithms in the IEEE Student Journal.",
+        "Led the ACM Student Chapter as President for 2 years — organized 10+ technical workshops attended by 500+ students.",
+        "Winner — Inter-University Hackathon 2023 (Smart City Track) with a real-time traffic optimization system."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "DevFolio",
+      "description": "A Jekyll-based Portfolio-as-Code template. Fork it, fill one JSON file, and deploy to GitHub Pages — zero HTML knowledge required.",
+      "image_url": "/assets/img/projects/project-1.png",
+      "stack":        ["Jekyll", "SCSS",    "JavaScript"],
+      "stack_colors": ["CC0000", "1572B6",  "F7DF1E"],
+      "stack_logos":  ["jekyll", "css3",    "javascript"],
+      "code_url": "https://github.com/SriSatyaLokesh/devfolio",
+      "live_url": "https://srisatyalokesh.github.io/devfolio"
+    },
+    {
+      "title": "OpenAPI Explorer",
+      "description": "A visual, browser-based tool for exploring, testing, and mocking REST APIs directly from any OpenAPI 3.x specification.",
+      "image_url": "https://via.placeholder.com/600x340/0d1117/58a6ff?text=OpenAPI+Explorer",
+      "stack":        ["React",   "TypeScript", "Node.js"],
+      "stack_colors": ["61DAFB",  "3178C6",     "339933"],
+      "stack_logos":  ["react",   "typescript", "nodedotjs"],
+      "code_url": "https://github.com/SriSatyaLokesh/openapi-explorer",
+      "live_url": ""
+    },
+    {
+      "title": "FlowDB",
+      "description": "A lightweight, schema-first query builder for PostgreSQL with type-safe relations, migrations, and an interactive query playground.",
+      "image_url": "/assets/img/projects/project-3.png",
+      "stack":        ["TypeScript", "PostgreSQL", "Go"],
+      "stack_colors": ["3178C6",     "4169E1",     "00ADD8"],
+      "stack_logos":  ["typescript", "postgresql", "go"],
+      "code_url": "https://github.com/SriSatyaLokesh/flowdb",
+      "live_url": "https://flowdb.dev"
+    },
+    {
+      "title": "Synthwave CLI",
+      "description": "An AI-powered terminal assistant that generates, explains, and debugs shell commands in natural language — built on top of Gemini API.",
+      "image_url": "https://via.placeholder.com/600x340/0d1117/58a6ff?text=Synthwave+CLI",
+      "stack":        ["Python",    "Gemini API", "Rich"],
+      "stack_colors": ["3776AB",    "4285F4",     "FF4444"],
+      "stack_logos":  ["python",    "google",     "python"],
+      "code_url": "https://github.com/SriSatyaLokesh/synthwave-cli",
+      "live_url": ""
+    }
+  ],
+
+  "recommendations": [
+    {
+      "text": "Lokesh is one of the sharpest engineers I've had the pleasure of working with. He approaches every problem with genuine intellectual curiosity, and his ability to rapidly prototype an idea and then harden it for production sets him apart from most candidates I've interviewed in 10+ years of hiring.",
+      "name": "Jane Doe",
+      "title": "Engineering Manager at Acme Corp",
+      "linkedin_url": "https://linkedin.com/in/janedoe"
+    },
+    {
+      "text": "One of the most motivated developers I have mentored. What separates Lokesh is not just technical ability — it's that he genuinely cares about the craft. He reads RFCs for fun. His code reviews are the most thorough on the team.",
+      "name": "John Smith",
+      "title": "Staff Engineer at StartupXYZ",
+      "linkedin_url": ""
+    },
+    {
+      "text": "Lokesh co-founded our university hackathon team and led us to first place with an architecture that honestly surprised the judges. Cool under pressure, excellent communicator, and the kind of teammate everyone wants in a crunch.",
+      "name": "Priya Patel",
+      "title": "SDE II at Google",
+      "linkedin_url": "https://linkedin.com/in/priyap"
+    }
+  ]
+}

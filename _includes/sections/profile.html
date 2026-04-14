@@ -1,0 +1,17 @@
+<section id="profile" class="profile section-wrapper" aria-label="About">
+  <div class="container profile__inner">
+    <div class="profile__image-wrap">
+      <img
+        src="{{ site.data.profile.profile_image_url }}"
+        alt="{{ site.data.profile.name }}"
+        class="profile__image"
+        width="280"
+        height="280"
+      />
+    </div>
+    <div class="profile__content">
+      <h2 class="section-title">About Me</h2>
+      <p class="profile__bio">{{ site.data.profile.bio }}</p>
+    </div>
+  </div>
+</section>

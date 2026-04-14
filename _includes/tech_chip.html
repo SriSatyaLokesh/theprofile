@@ -1,0 +1,20 @@
+{% comment %}
+  tech_chip.html — High-fidelity tech stack chips
+  -----------------------------------------------
+  Parameters:
+    include.label  — Technology name (e.g., "React")
+    include.logo   — (Optional) Simple Icons slug
+{% endcomment %}
+
+{% assign slug = include.logo | default: "simpleicons" %}
+
+<div class="tech-chip" data-tech="{{ include.label | downcase }}">
+  <img 
+    src="https://cdn.simpleicons.org/{{ slug }}" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">{{ include.label }}</span>
+</div>

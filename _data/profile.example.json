@@ -4,9 +4,9 @@
     "vanta_effect": "birds",
     "vanta_magic": true,
     "colors": {
-      "primary": "#0d1117",
-      "secondary": "#161b22",
-      "accent": "#58a6ff"
+       "primary": "#050505",
+    "secondary": "#1a0505",
+    "accent": "#FF4500"
     },
     "music": {
       "enabled": true,

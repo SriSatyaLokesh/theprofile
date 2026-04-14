@@ -4,17 +4,16 @@
     "vanta_effect": "net",
     "vanta_magic": true,
     "colors": {
-      "primary": "#0d1117",
-      "secondary": "#161b22",
-      "accent": "#58a6ff"
+      "primary": "#0a0a0c",
+      "secondary": "#121216",
+      "accent": "#C084FC"
     },
     "music": {
       "enabled": true,
       "file": "./assets/music/interstellar.mp3",
       "max_volume": 1.0
     },
-    "use_logo_image": true,
-    "nav_bar_logo_url": "./assets/img/devfolio.png"
+    "use_logo_image": false
   },
 
   "available_for_work": true,
@@ -23,17 +22,17 @@
   },
 
   "name": "Sri Satya Lokesh",
-  "headline": "Lead Engineer · Solutions Architect · AI & Automation Specialist",
-  "email": "srisatyalokeshk2@gmail.com",
-  "profile_image_url": "https://avatars.githubusercontent.com/u/41846540?v=4",
-  "resume_url": "#",
+  "headline": "Lead Engineer · Solutions Architect, Agentic AI Developer",
+  "email": "srisatyalokesh@duck.com",
+  "profile_image_url": "https://srisatyalokesh.is-a.dev/assets/img/profile.png",
+  "resume_url": "https://srisatyalokesh.is-a.dev/assets/resume/Sri-Satya-Lokesh-K-Lead-Engineer-Resume.pdf",
   "bio": "Lead Engineer with over 7 years of expertise in architecting scalable platforms, AI-driven automation, and enterprise-grade systems. I have a proven track record of mentoring 18+ engineers and leading technical initiatives for high-scale platforms supporting 350K+ live customers. Passionate about event-driven architectures and full-stack innovation.",
 
   "social": [
     { "platform": "GitHub",    "url": "https://github.com/srisatyalokesh",       "logo": "github",       "color": "181717" },
     { "platform": "LinkedIn",  "url": "https://linkedin.com/in/srisatyalokesh",  "logo": "linkedin",     "color": "0A66C2" },
     { "platform": "Twitter",   "url": "https://twitter.com/TechWithSatya",       "logo": "twitter",      "color": "1DA1F2" },
-    { "platform": "YouTube",   "url": "https://www.youtube.com/@TechWithSatya",  "logo": "youtube",      "color": "FF0000" }
+    { "platform": "YouTube",   "url": "https://www.youtube.com/@TechMobie",  "logo": "youtube",      "color": "FF0000" }
   ],
 
   "experience": [
@@ -124,7 +123,7 @@
     {
       "title": "Event-Driven Notification Platform",
       "description": "An elite, scalable notification engine built on event-driven architecture to handle high-velocity message delivery across multiple channels.",
-      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=2074",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkM1IRoFBYOHikeL5YVusFPrB5u1L_jtAK-A&s",
       "stack":        ["Python", "Kafka", "Redis"],
       "stack_colors": ["3776AB", "231F20", "DC382D"],
       "stack_logos":  ["python", "apachekafka", "redis"],

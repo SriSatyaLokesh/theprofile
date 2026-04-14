@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150x150/0d1117/58a6ff?text=DevFolio" alt="DevFolio Logo" width="120" height="120">
+  <img src="assets/img/devfolio.png" alt="DevFolio Logo" width="120" height="120">
   <h1>DevFolio</h1>
   <p><strong>Portfolio-as-Code. Zero HTML. Maximum Impact.</strong></p>
 

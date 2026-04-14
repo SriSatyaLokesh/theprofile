@@ -1,0 +1,166 @@
+{
+  "theme_config": {
+    "mode": "dark",
+    "vanta_effect": "net",
+    "vanta_magic": true,
+    "colors": {
+      "primary": "#0d1117",
+      "secondary": "#161b22",
+      "accent": "#58a6ff"
+    },
+    "music": {
+      "enabled": true,
+      "file": "./assets/music/interstellar.mp3",
+      "max_volume": 1.0
+    },
+    "use_logo_image": true,
+    "nav_bar_logo_url": "./assets/img/devfolio.png"
+  },
+
+  "available_for_work": true,
+  "blog_config": {
+    "enabled": true
+  },
+
+  "name": "Sri Satya Lokesh",
+  "headline": "Lead Engineer · Solutions Architect · AI & Automation Specialist",
+  "email": "srisatyalokeshk2@gmail.com",
+  "profile_image_url": "https://avatars.githubusercontent.com/u/41846540?v=4",
+  "resume_url": "#",
+  "bio": "Lead Engineer with over 7 years of expertise in architecting scalable platforms, AI-driven automation, and enterprise-grade systems. I have a proven track record of mentoring 18+ engineers and leading technical initiatives for high-scale platforms supporting 350K+ live customers. Passionate about event-driven architectures and full-stack innovation.",
+
+  "social": [
+    { "platform": "GitHub",    "url": "https://github.com/srisatyalokesh",       "logo": "github",       "color": "181717" },
+    { "platform": "LinkedIn",  "url": "https://linkedin.com/in/srisatyalokesh",  "logo": "linkedin",     "color": "0A66C2" },
+    { "platform": "Twitter",   "url": "https://twitter.com/TechWithSatya",       "logo": "twitter",      "color": "1DA1F2" },
+    { "platform": "YouTube",   "url": "https://www.youtube.com/@TechWithSatya",  "logo": "youtube",      "color": "FF0000" }
+  ],
+
+  "experience": [
+    {
+      "role": "Lead Engineer",
+      "company": "DHAN AI",
+      "company_url": "https://dhan.ai",
+      "duration": "Jun 2022 – Present",
+      "description": [
+        "Architecting high-scale platforms supporting 350K+ live customers, ensuring high availability and performance.",
+        "Leading cross-functional engineering teams and driving strategic technical initiatives across the organization.",
+        "Designing enterprise-grade systems with a focus on scalability, security, and developer experience.",
+        "Mentoring 18+ engineers through technical leadership, code reviews, and architectural guidance."
+      ]
+    },
+    {
+      "role": "Software Development Engineer",
+      "company": "DHAN AI",
+      "company_url": "https://dhan.ai",
+      "duration": "Apr 2020 – Jun 2022",
+      "description": [
+        "Built multi-tenant conversational AI platforms utilizing Rasa, Dialogflow, and Microsoft Bot Framework.",
+        "Developed core automation engines that significantly reduced manual overhead and improved system efficiency.",
+        "Architected notification systems capable of handling high-velocity event-driven traffic.",
+        "Collaborated on the transition from legacy systems to modern, scalable microservices."
+      ]
+    },
+    {
+      "role": "Python Developer Intern",
+      "company": "SYNOPSYS",
+      "company_url": "https://www.synopsys.com",
+      "duration": "Sep 2019 – Apr 2020",
+      "description": [
+        "Focused on automation and internal tool development using Python and shell scripting.",
+        "Streamlined development workflows by creating custom utilities for engineering teams.",
+        "Assisted in testing and debugging complex software modules within the Synopsys ecosystem."
+      ]
+    }
+  ],
+
+  "skills": [
+    {
+      "category": "AI & Agentic Tools",
+      "items": ["Agentic AI", "Prompt Engineering", "Rasa", "Claude Code", "Cursor", "n8n"],
+      "logos": ["openai", "google", "python", "visualstudiocode", "cursor", "n8n"]
+    },
+    {
+      "category": "Backend & Languages",
+      "items": ["Python", "Django", "Node.js", "TypeScript", "FastAPI"],
+      "logos": ["python", "django", "nodedotjs", "typescript", "fastapi"]
+    },
+    {
+      "category": "Infrastructure & DB",
+      "items": ["PostgreSQL", "Redis", "Docker", "Kafka", "Jenkins", "Supabase"],
+      "logos": ["postgresql", "redis", "docker", "apachekafka", "jenkins", "supabase"]
+    },
+    {
+      "category": "Frontend & Design",
+      "items": ["React", "GraphQL", "Figma", "Photoshop", "Blender"],
+      "logos": ["react", "graphql", "figma", "adobephotoshop", "blender"]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "B.Tech in Engineering",
+      "institution": "Computer Science Foundation",
+      "year": "2019",
+      "description": [
+        "Specialized in software architecture and automated systems.",
+        "Completed internship at Synopsys focusing on internal tooling and Python automation.",
+        "Developed a strong foundation in data structures, algorithms, and system design."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Customer Experience Platform",
+      "description": "A high-scale platform for telecom operations supporting hundreds of thousands of concurrent users with real-time analytics and management.",
+      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+      "stack":        ["Node.js", "PostgreSQL", "React"],
+      "stack_colors": ["339933", "4169E1", "61DAFB"],
+      "stack_logos":  ["nodedotjs", "postgresql", "react"],
+      "code_url": "",
+      "live_url": ""
+    },
+    {
+      "title": "Event-Driven Notification Platform",
+      "description": "An elite, scalable notification engine built on event-driven architecture to handle high-velocity message delivery across multiple channels.",
+      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=2074",
+      "stack":        ["Python", "Kafka", "Redis"],
+      "stack_colors": ["3776AB", "231F20", "DC382D"],
+      "stack_logos":  ["python", "apachekafka", "redis"],
+      "code_url": "",
+      "live_url": ""
+    },
+    {
+      "title": "Multi-Tenant Chatbot Automation",
+      "description": "Advanced conversational AI system achieves 40% reduction in support calls for massive customer bases via Rasa and Dialogflow integration.",
+      "image_url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020",
+      "stack":        ["Rasa", "Dialogflow", "Node.js"],
+      "stack_colors": ["5A17EE", "FF9800", "339933"],
+      "stack_logos":  ["rasa", "google", "nodedotjs"],
+      "code_url": "",
+      "live_url": ""
+    }
+  ],
+
+  "recommendations": [
+    {
+      "text": "Sri Satya Lokesh's expertise and dedication were key assets to our Commercial NDS project. I highly recommend him for any technical leadership role.",
+      "name": "Chad Baumann",
+      "title": "Systems Project Manager @ Ziply Fiber",
+      "linkedin_url": ""
+    },
+    {
+      "text": "Lokesh is a dependable engineer with deep expertise in scalable backend systems. His work at Dhan AI has been exemplary.",
+      "name": "Manisha Safaya",
+      "title": "Technical Specialist @ Tech Mahindra",
+      "linkedin_url": ""
+    },
+    {
+      "text": "Lokesh's impact on our customer experience applications has been significant. He is a truly talented solutions architect.",
+      "name": "Manjunath S",
+      "title": "Senior Engineer @ Ziply",
+      "linkedin_url": ""
+    }
+  ]
+}

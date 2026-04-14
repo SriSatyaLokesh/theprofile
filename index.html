@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Portfolio-as-Code — A Jekyll developer portfolio template. Fork, fill JSON, deploy." />
+<title>Sri Satya Lokesh | Portfolio</title>
+
+<!-- FOUC Prevention: inject CSS variables and initial theme before stylesheet loads -->
+<style>
+  :root {
+    --color-primary:   #0d1117;
+    --color-secondary: #161b22;
+    --color-accent:    #58a6ff;
+  }
+</style>
+<script>
+  // Apply saved theme preference before any paint to prevent FOUC
+  (function() {
+    var saved = localStorage.getItem('devfolio-theme');
+    var jsonDefault = 'dark';
+    var theme = saved || jsonDefault;
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+
+<!-- Google Fonts: Space Grotesk + Archivo -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="/devfolio/assets/css/main.css" />
+
+  <body>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav__inner">
+    <a href="#hero" class="nav__brand">
+      Sri Satya Lokesh
+    </a>
+
+    <ul class="nav__links" role="list" id="nav-links">
+      <div class="nav__indicator"></div>
+      <li><a href="#profile"         class="nav__link">About</a></li>
+      <li><a href="#experience"      class="nav__link">Experience</a></li>
+      <li><a href="#education"       class="nav__link">Education</a></li>
+      <li><a href="#skills"          class="nav__link">Skills</a></li>
+      <li><a href="#projects"        class="nav__link">Projects</a></li>
+      <li><a href="#contact"         class="nav__link">Contact</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <!-- Dark/Light mode toggle -->
+      <button
+        id="theme-toggle"
+        class="nav__theme-toggle"
+        aria-label="Toggle dark/light mode"
+        title="Toggle theme"
+      >
+        <!-- Sun icon (light mode) -->
+        <svg class="icon icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon (dark mode) -->
+        <svg class="icon icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="nav-toggle"
+        class="nav__hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+    <main>
+      <section id="hero" class="hero" aria-label="Hero">
+  <div class="container hero__content">
+    
+    <div class="hero__badge">
+      <span class="hero__dot" aria-hidden="true"></span>
+      Available for opportunities
+    </div>
+    
+    
+    <h1 class="hero__name">Sri Satya Lokesh</h1>
+    
+    <p class="hero__headline" data-gsap="hero-headline">
+      Full Stack Developer · Open Source Enthusiast · Builder<span class="typing-dots"></span>
+    </p>
+    <div class="hero__cta-group">
+      <a href="/assets/resume.pdf" class="hero__cta hero__cta--primary" target="_blank" rel="noopener noreferrer">
+        View Resume
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </a>
+      <a href="#contact" class="hero__cta hero__cta--secondary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<section id="profile" class="profile section-wrapper" aria-label="About">
+  <div class="container profile__inner">
+    <div class="profile__image-wrap">
+      <img
+        src="https://avatars.githubusercontent.com/u/0"
+        alt="Sri Satya Lokesh"
+        class="profile__image"
+        width="280"
+        height="280"
+      />
+    </div>
+    <div class="profile__content">
+      <h2 class="section-title">About Me</h2>
+      <p class="profile__bio">I'm a full-stack developer who obsesses over developer experience, clean architecture, and products that scale. I've shipped production systems serving millions of users, led open-source projects with global contributors, and never stop learning. When I'm not deploying, I'm writing, mentoring, or exploring the next tool that changes how we build.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="experience section-wrapper" aria-label="Work Experience">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="experience__list">
+      
+        <article class="experience__item">
+          <div class="experience__header">
+            <h3 class="experience__role">Software Engineer II</h3>
+            <span class="experience__duration">Jan 2025 – Present</span>
+          </div>
+          
+          <a href="https://acmecorp.com" class="experience__company" target="_blank" rel="noopener">Acme Corp</a>
+          
+          
+          
+            <ul class="experience__description-list">
+              
+                <li>Architected and deployed a distributed event-streaming pipeline on AWS Kinesis processing 12M+ events/day with sub-50ms p99 latency.</li>
+              
+                <li>Led a cross-functional squad of 6 engineers to migrate a monolith to domain-driven microservices — reducing deployment time from 40 min to under 4 min.</li>
+              
+                <li>Introduced a comprehensive E2E testing framework with Playwright, reducing critical regressions by 70% across all CI runs.</li>
+              
+                <li>Mentored 2 junior engineers via weekly code reviews and pair programming sessions, accelerating their growth to mid-level in under 8 months.</li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="experience__item">
+          <div class="experience__header">
+            <h3 class="experience__role">Software Engineer I</h3>
+            <span class="experience__duration">Jan 2024 – Dec 2024</span>
+          </div>
+          
+          <a href="https://acmecorp.com" class="experience__company" target="_blank" rel="noopener">Acme Corp</a>
+          
+          
+          
+            <ul class="experience__description-list">
+              
+                <li>Built and scaled RESTful microservices in Node.js + PostgreSQL handling 10M+ requests/day with 99.97% uptime SLA.</li>
+              
+                <li>Designed and implemented an internal CLI tool (published to npm) used by 40+ engineers to scaffold service boilerplate in seconds.</li>
+              
+                <li>Optimized database query plans, reducing average API response time by 35% on the critical checkout path.</li>
+              
+                <li>Owned the on-call rotation for three production services and resolved 15+ P0 incidents with RCAs.</li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="experience__item">
+          <div class="experience__header">
+            <h3 class="experience__role">Frontend Developer Intern</h3>
+            <span class="experience__duration">Jun 2023 – Dec 2023</span>
+          </div>
+          
+          <a href="https://startupxyz.io" class="experience__company" target="_blank" rel="noopener">StartupXYZ</a>
+          
+          
+          
+            <ul class="experience__description-list">
+              
+                <li>Rebuilt the customer dashboard from scratch in React 18 + TypeScript, cutting bundle size by 48% with code splitting and tree-shaking.</li>
+              
+                <li>Improved Core Web Vitals scores (LCP, CLS, FID) by 40% — directly contributing to a 12% improvement in organic search ranking.</li>
+              
+                <li>Shipped 3 major feature releases in 6 months in an agile team of 8, consistently meeting sprint commitments.</li>
+              
+                <li>Collaborated with UX designers to implement a fully accessible (WCAG 2.1 AA) component library from Figma specs.</li>
+              
+            </ul>
+          
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+<section id="education" class="education section-wrapper" aria-label="Education">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="education__list">
+      
+        <article class="education__item" style="animation-delay: 0ms">
+          <div class="education__header">
+            <h3 class="education__degree">B.Tech in Computer Science & Engineering</h3>
+            <span class="education__year">2024</span>
+          </div>
+          <span class="education__institution">XYZ University</span>
+          
+          
+            
+              <ul class="experience__description-list">
+                
+                  <li>Graduated with First Class Distinction — CGPA 8.9/10.</li>
+                
+                  <li>Published undergraduate research on distributed consensus algorithms in the IEEE Student Journal.</li>
+                
+                  <li>Led the ACM Student Chapter as President for 2 years — organized 10+ technical workshops attended by 500+ students.</li>
+                
+                  <li>Winner — Inter-University Hackathon 2023 (Smart City Track) with a real-time traffic optimization system.</li>
+                
+              </ul>
+            
+          
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section-wrapper skills" aria-label="Skills">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Skills</h2>
+    </div>
+
+    <div class="skills-bento-grid">
+      
+      
+        
+        
+        
+
+        <article class="skills-card skills-card--span-8">
+          <div class="skills-card__content">
+            <h3 class="skills-card__category">Frontend</h3>
+            <div class="skills-card__list">
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="react">
+  <img 
+    src="https://cdn.simpleicons.org/react" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">React</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="next.js">
+  <img 
+    src="https://cdn.simpleicons.org/nextdotjs" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Next.js</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="typescript">
+  <img 
+    src="https://cdn.simpleicons.org/typescript" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">TypeScript</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="tailwind css">
+  <img 
+    src="https://cdn.simpleicons.org/tailwindcss" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Tailwind CSS</span>
+</div>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+        
+        
+
+        <article class="skills-card skills-card--span-4">
+          <div class="skills-card__content">
+            <h3 class="skills-card__category">Backend</h3>
+            <div class="skills-card__list">
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="node.js">
+  <img 
+    src="https://cdn.simpleicons.org/nodedotjs" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Node.js</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="express">
+  <img 
+    src="https://cdn.simpleicons.org/express" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Express</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="go">
+  <img 
+    src="https://cdn.simpleicons.org/go" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Go</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="postgresql">
+  <img 
+    src="https://cdn.simpleicons.org/postgresql" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">PostgreSQL</span>
+</div>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+        
+        
+
+        <article class="skills-card skills-card--span-4">
+          <div class="skills-card__content">
+            <h3 class="skills-card__category">DevOps & Cloud</h3>
+            <div class="skills-card__list">
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="aws">
+  <img 
+    src="https://cdn.simpleicons.org/amazonaws" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">AWS</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="docker">
+  <img 
+    src="https://cdn.simpleicons.org/docker" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Docker</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="kubernetes">
+  <img 
+    src="https://cdn.simpleicons.org/kubernetes" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Kubernetes</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="github actions">
+  <img 
+    src="https://cdn.simpleicons.org/githubactions" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">GitHub Actions</span>
+</div>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+        
+        
+
+        <article class="skills-card skills-card--span-8">
+          <div class="skills-card__content">
+            <h3 class="skills-card__category">Tools</h3>
+            <div class="skills-card__list">
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="git">
+  <img 
+    src="https://cdn.simpleicons.org/git" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Git</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="figma">
+  <img 
+    src="https://cdn.simpleicons.org/figma" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Figma</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="playwright">
+  <img 
+    src="https://cdn.simpleicons.org/playwright" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Playwright</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="postman">
+  <img 
+    src="https://cdn.simpleicons.org/postman" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Postman</span>
+</div>
+
+              
+            </div>
+          </div>
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects section-wrapper" aria-label="Projects">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Projects</h2>
+    </div>
+
+    <div class="project-grid">
+      
+        
+        <article class="project-card" data-index="0">
+          
+            <div class="project-card__image-container">
+              <img
+                src="/devfolio/assets/img/projects/project-1.png"
+                alt="DevFolio"
+                class="project-card__image"
+                loading="lazy"
+              />
+              <div class="project-card__overlay"></div>
+            </div>
+          
+
+          <div class="project-card__content">
+            <h3 class="project-card__title">DevFolio</h3>
+            <p class="project-card__description">A Jekyll-based Portfolio-as-Code template. Fork it, fill one JSON file, and deploy to GitHub Pages — zero HTML knowledge required.</p>
+
+            <div class="project-card__stack">
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="jekyll">
+  <img 
+    src="https://cdn.simpleicons.org/jekyll" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Jekyll</span>
+</div>
+
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="scss">
+  <img 
+    src="https://cdn.simpleicons.org/css3" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">SCSS</span>
+</div>
+
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="javascript">
+  <img 
+    src="https://cdn.simpleicons.org/javascript" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">JavaScript</span>
+</div>
+
+              
+            </div>
+
+            <div class="project-card__links">
+              
+                <a href="https://github.com/SriSatyaLokesh/devfolio" class="project-link" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-4.51-1.5-7-2"/></svg>
+                </a>
+              
+              
+                <a href="https://srisatyalokesh.github.io/devfolio" class="project-link project-link--primary" target="_blank" rel="noopener">
+                  <span>Visit site</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                </a>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+        <article class="project-card" data-index="1">
+          
+            <div class="project-card__image-container">
+              <img
+                src="https://via.placeholder.com/600x340/0d1117/58a6ff?text=OpenAPI+Explorer"
+                alt="OpenAPI Explorer"
+                class="project-card__image"
+                loading="lazy"
+              />
+              <div class="project-card__overlay"></div>
+            </div>
+          
+
+          <div class="project-card__content">
+            <h3 class="project-card__title">OpenAPI Explorer</h3>
+            <p class="project-card__description">A visual, browser-based tool for exploring, testing, and mocking REST APIs directly from any OpenAPI 3.x specification.</p>
+
+            <div class="project-card__stack">
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="react">
+  <img 
+    src="https://cdn.simpleicons.org/react" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">React</span>
+</div>
+
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="typescript">
+  <img 
+    src="https://cdn.simpleicons.org/typescript" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">TypeScript</span>
+</div>
+
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="node.js">
+  <img 
+    src="https://cdn.simpleicons.org/nodedotjs" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Node.js</span>
+</div>
+
+              
+            </div>
+
+            <div class="project-card__links">
+              
+                <a href="https://github.com/SriSatyaLokesh/openapi-explorer" class="project-link" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-4.51-1.5-7-2"/></svg>
+                </a>
+              
+              
+            </div>
+          </div>
+        </article>
+      
+        
+        <article class="project-card" data-index="2">
+          
+            <div class="project-card__image-container">
+              <img
+                src="/devfolio/assets/img/projects/project-3.png"
+                alt="FlowDB"
+                class="project-card__image"
+                loading="lazy"
+              />
+              <div class="project-card__overlay"></div>
+            </div>
+          
+
+          <div class="project-card__content">
+            <h3 class="project-card__title">FlowDB</h3>
+            <p class="project-card__description">A lightweight, schema-first query builder for PostgreSQL with type-safe relations, migrations, and an interactive query playground.</p>
+
+            <div class="project-card__stack">
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="typescript">
+  <img 
+    src="https://cdn.simpleicons.org/typescript" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">TypeScript</span>
+</div>
+
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="postgresql">
+  <img 
+    src="https://cdn.simpleicons.org/postgresql" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">PostgreSQL</span>
+</div>
+
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="go">
+  <img 
+    src="https://cdn.simpleicons.org/go" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Go</span>
+</div>
+
+              
+            </div>
+
+            <div class="project-card__links">
+              
+                <a href="https://github.com/SriSatyaLokesh/flowdb" class="project-link" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-4.51-1.5-7-2"/></svg>
+                </a>
+              
+              
+                <a href="https://flowdb.dev" class="project-link project-link--primary" target="_blank" rel="noopener">
+                  <span>Visit site</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                </a>
+              
+            </div>
+          </div>
+        </article>
+      
+        
+        <article class="project-card" data-index="3">
+          
+            <div class="project-card__image-container">
+              <img
+                src="https://via.placeholder.com/600x340/0d1117/58a6ff?text=Synthwave+CLI"
+                alt="Synthwave CLI"
+                class="project-card__image"
+                loading="lazy"
+              />
+              <div class="project-card__overlay"></div>
+            </div>
+          
+
+          <div class="project-card__content">
+            <h3 class="project-card__title">Synthwave CLI</h3>
+            <p class="project-card__description">An AI-powered terminal assistant that generates, explains, and debugs shell commands in natural language — built on top of Gemini API.</p>
+
+            <div class="project-card__stack">
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="python">
+  <img 
+    src="https://cdn.simpleicons.org/python" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Python</span>
+</div>
+
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="gemini api">
+  <img 
+    src="https://cdn.simpleicons.org/google" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Gemini API</span>
+</div>
+
+              
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="rich">
+  <img 
+    src="https://cdn.simpleicons.org/python" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Rich</span>
+</div>
+
+              
+            </div>
+
+            <div class="project-card__links">
+              
+                <a href="https://github.com/SriSatyaLokesh/synthwave-cli" class="project-link" target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-4.51-1.5-7-2"/></svg>
+                </a>
+              
+              
+            </div>
+          </div>
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+<section id="recommendations" class="recommendations section-wrapper" aria-label="Recommendations">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Recommendations</h2>
+    </div>
+    <div class="recommendations__grid">
+      
+        <article class="rec-card">
+          <blockquote class="rec-card__quote">
+            <p>Lokesh is one of the sharpest engineers I've had the pleasure of working with. He approaches every problem with genuine intellectual curiosity, and his ability to rapidly prototype an idea and then harden it for production sets him apart from most candidates I've interviewed in 10+ years of hiring.</p>
+          </blockquote>
+          <footer class="rec-card__footer">
+            <strong class="rec-card__name">Jane Doe</strong>
+            
+              <span class="rec-card__title">Engineering Manager at Acme Corp</span>
+            
+            
+              <a
+                href="https://linkedin.com/in/janedoe"
+                class="rec-card__linkedin"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Jane Doe's LinkedIn profile"
+              >LinkedIn &rarr;</a>
+            
+          </footer>
+        </article>
+      
+        <article class="rec-card">
+          <blockquote class="rec-card__quote">
+            <p>One of the most motivated developers I have mentored. What separates Lokesh is not just technical ability — it's that he genuinely cares about the craft. He reads RFCs for fun. His code reviews are the most thorough on the team.</p>
+          </blockquote>
+          <footer class="rec-card__footer">
+            <strong class="rec-card__name">John Smith</strong>
+            
+              <span class="rec-card__title">Staff Engineer at StartupXYZ</span>
+            
+            
+          </footer>
+        </article>
+      
+        <article class="rec-card">
+          <blockquote class="rec-card__quote">
+            <p>Lokesh co-founded our university hackathon team and led us to first place with an architecture that honestly surprised the judges. Cool under pressure, excellent communicator, and the kind of teammate everyone wants in a crunch.</p>
+          </blockquote>
+          <footer class="rec-card__footer">
+            <strong class="rec-card__name">Priya Patel</strong>
+            
+              <span class="rec-card__title">SDE II at Google</span>
+            
+            
+              <a
+                href="https://linkedin.com/in/priyap"
+                class="rec-card__linkedin"
+                target="_blank"
+                rel="noopener"
+                aria-label="View Priya Patel's LinkedIn profile"
+              >LinkedIn &rarr;</a>
+            
+          </footer>
+        </article>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="contact section-wrapper" aria-label="Contact">
+  <div class="container">
+
+    <div class="contact__grid">
+
+      <!-- LEFT: CTA Column -->
+      <div class="contact__cta-col">
+        <div class="contact__eyebrow">
+          <span class="contact__dot" aria-hidden="true"></span>
+          Open to opportunities
+        </div>
+
+        <h2 class="section-title contact__title">Let's Build<br>Something<br><span class="contact__title-accent">Great Together</span></h2>
+
+        <p class="contact__intro">
+          Whether it's a full-time role, a side project, or just a great conversation — my inbox is always open. I typically reply within 24 hours.
+        </p>
+
+        <!-- Copy email button (JS progressive enhancement) -->
+        <div class="contact__email-block">
+          <span class="contact__email-label">Reach me directly</span>
+          <button
+            id="copy-email-btn"
+            class="contact__email-btn"
+            data-email="lokesh@example.com"
+            aria-label="Copy email address"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" class="contact__email-icon">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span class="contact__email-text">lokesh@example.com</span>
+            <svg class="contact__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span class="contact__copy-feedback" aria-live="polite"></span>
+          </button>
+        </div>
+
+        <!-- Response time promise -->
+        <div class="contact__promise">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Avg. response time: &lt; 24 hours
+        </div>
+      </div>
+
+      <!-- RIGHT: Social Cards -->
+      <div class="contact__social-col">
+        
+          
+            <a
+              href="https://github.com/SriSatyaLokesh"
+              class="contact__social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my GitHub profile"
+            >
+              <div class="contact__social-icon" aria-hidden="true">
+                
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  
+              </div>
+
+              <div class="contact__social-info">
+                <span class="contact__social-name">GitHub</span>
+                <span class="contact__social-handle">github.com/SriSatyaLokesh</span>
+              </div>
+
+              <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+          
+        
+          
+            <a
+              href="https://linkedin.com/in/srisatyalokesh"
+              class="contact__social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my LinkedIn profile"
+            >
+              <div class="contact__social-icon" aria-hidden="true">
+                
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062-0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  
+              </div>
+
+              <div class="contact__social-info">
+                <span class="contact__social-name">LinkedIn</span>
+                <span class="contact__social-handle">linkedin.com/in/srisatyalokesh</span>
+              </div>
+
+              <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+          
+        
+          
+            <a
+              href="https://twitter.com/SriSatyaLokesh"
+              class="contact__social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my Twitter profile"
+            >
+              <div class="contact__social-icon" aria-hidden="true">
+                
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  
+              </div>
+
+              <div class="contact__social-info">
+                <span class="contact__social-name">Twitter</span>
+                <span class="contact__social-handle">twitter.com/SriSatyaLokesh</span>
+              </div>
+
+              <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+          
+        
+          
+            <a
+              href="https://dev.to/srisatyalokesh"
+              class="contact__social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my Dev.to profile"
+            >
+              <div class="contact__social-icon" aria-hidden="true">
+                
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.64-2.52.66-.03c.39-.02.66 0 .66.04 0 .1-1.33 4.54-1.48 4.98z"/></svg>
+                  
+              </div>
+
+              <div class="contact__social-info">
+                <span class="contact__social-name">Dev.to</span>
+                <span class="contact__social-handle">dev.to/srisatyalokesh</span>
+              </div>
+
+              <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+          
+        
+          
+            <a
+              href="https://leetcode.com/SriSatyaLokesh"
+              class="contact__social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my LeetCode profile"
+            >
+              <div class="contact__social-icon" aria-hidden="true">
+                
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+                  
+              </div>
+
+              <div class="contact__social-info">
+                <span class="contact__social-name">LeetCode</span>
+                <span class="contact__social-handle">leetcode.com/SriSatyaLokesh</span>
+              </div>
+
+              <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+          
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Copy email to clipboard with feedback
+  (function() {
+    var btn = document.getElementById('copy-email-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var email = btn.getAttribute('data-email');
+      var feedback = btn.querySelector('.contact__copy-feedback');
+      navigator.clipboard.writeText(email).then(function() {
+        btn.classList.add('contact__email-btn--copied');
+        feedback.textContent = 'Copied!';
+        setTimeout(function() {
+          btn.classList.remove('contact__email-btn--copied');
+          feedback.textContent = '';
+        }, 2000);
+      });
+    });
+  })();
+</script>
+
+
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__left">
+      <p class="footer__copy">
+        &copy; 2026 Sri Satya Lokesh. All rights reserved.
+      </p>
+      <p class="footer__credit">
+        Built with <a href="https://github.com/SriSatyaLokesh/devfolio" target="_blank" rel="noopener">DevFolio</a>
+        &mdash; Portfolio-as-Code.
+      </p>
+    </div>
+
+    <div class="footer__right">
+      <a href="#hero" class="footer__back-to-top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+    
+    
+      
+
+
+<!-- Load Vanta Dependencies -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+
+<!-- Load the specific Vanta effect from CDN -->
+<script defer src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+
+<script>
+  window.initVanta = function() {
+    if (window.DEV_FOLIO_VANTA) {
+      window.DEV_FOLIO_VANTA.destroy();
+    }
+
+    // Surgical color helper for Vanta/Three.js
+    const colorToNum = (hex) => {
+      if (!hex) return 0x000000;
+      return parseInt(hex.replace("#", "0x"), 16);
+    };
+
+    const effectKey = 'BIRDS';
+    const accentStr = "#58a6ff";
+    const primaryStr = "#0d1117";
+    
+    // Theme detection
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const bgStr = isLight ? '#f0f4f8' : primaryStr;
+
+    // Numeric versions
+    const accent = colorToNum(accentStr);
+    const bg = colorToNum(bgStr);
+
+    let config = {
+      el: "#hero",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      backgroundColor: bg,
+      color: accent
+    };
+
+    // Precision tuning for every effect
+    switch(effectKey) {
+      case 'BIRDS':
+        config.color1 = accent;
+        config.color2 = accent; // Force monochromatic
+        config.colorMode = "lerp";
+        config.birdSize = 1.2;
+        break;
+      case 'WAVES':
+        config.color = accent;
+        config.backgroundColor = bg;
+        config.shininess = isLight ? 50 : 150; 
+        config.waveHeight = 35.0;
+        config.waveSpeed = 1.0;
+        config.zoom = 0.8;
+        break;
+      case 'FOG':
+        config.highlightColor = accent;
+        config.midtoneColor = accent;
+        config.lowlightColor = accent;
+        config.baseColor = bg;
+        break;
+      case 'NET':
+        config.color = accent;
+        config.backgroundColor = bg;
+        break;
+      case 'DOTS':
+        config.color = accent;
+        config.color2 = accent;
+        config.backgroundColor = bg;
+        config.size = 3.0;
+        config.spacing = 35.0;
+        break;
+      case 'CELLS':
+        config.color1 = accent;
+        config.color2 = accent;
+        break;
+      case 'CLOUDS':
+      case 'CLOUDS2':
+        // Clouds/Clouds2 are explicitly exempted from monochromatic force per user request
+        if (isLight) {
+          config.skyColor = 0x68b2e3;
+          config.cloudColor = 0xadc1d6;
+          config.cloudShadowColor = 0x183550;
+          config.sunColor = 0xff9919;
+          config.sunGlareColor = 0xff6633;
+          config.sunlightColor = 0xff9933;
+        } else {
+          config.skyColor = colorToNum(effectKey === 'CLOUDS2' ? '#0d1117' : bgStr);
+          config.cloudColor = colorToNum('#334155');
+          config.cloudShadowColor = colorToNum('#1e293b');
+          config.sunColor = accent;
+        }
+        config.speed = 1.2;
+        if (effectKey === 'CLOUDS2' && !isLight) {
+          config.lightColor = accent;
+        }
+        break;
+      case 'TOPOLOGY':
+        config.color = accent;
+        config.backgroundColor = bg;
+        config.speed = 6.0;
+        break;
+      case 'RINGS':
+        // Rings is explicitly exempted but follows accent where applicable
+        config.color = accent;
+        config.backgroundColor = bg;
+        break;
+      case 'HALO':
+        const haloBgStr = isLight ? '#94a3b8' : bgStr;
+        config.backgroundColor = colorToNum(haloBgStr);
+        config.baseColor = colorToNum(haloBgStr);
+        config.color2 = accent;
+        config.color = accent;
+        config.amplitudeFactor = 2.0;
+        break;
+      default:
+        break;
+    }
+
+    try {
+      if (typeof VANTA !== 'undefined' && typeof VANTA[effectKey] === 'function') {
+        const instance = VANTA[effectKey](config);
+        
+        // Post-init hijacking to force monochromatic sync on problematic effects
+        if (effectKey === 'RINGS' || effectKey === 'HALO') {
+          if (instance.colors) instance.colors = [accent, accent];
+          if (instance.options) {
+            instance.options.color = accent;
+            instance.options.color2 = accent;
+          }
+          if (typeof instance.restart === 'function') instance.restart();
+        }
+        
+        window.DEV_FOLIO_VANTA = instance;
+      } else {
+        if (effectKey !== 'NET' && typeof VANTA !== 'undefined' && typeof VANTA.NET === 'function') {
+           window.DEV_FOLIO_VANTA = VANTA.NET(config);
+        }
+      }
+    } catch(err) {
+      console.error("Vanta initialization failed:", err);
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', window.initVanta);
+</script>
+
+    
+
+    <!-- Interactions -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="/devfolio/assets/js/smooth-scroll.js"></script>
+    <script defer src="/devfolio/assets/js/gsap-animations.js"></script>
+  </body>
+</html>

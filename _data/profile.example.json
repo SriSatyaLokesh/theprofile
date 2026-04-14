@@ -28,6 +28,10 @@
   "profile_image_url": "https://avatars.githubusercontent.com/u/0",
 
   "__ bio __": "A short paragraph about yourself shown in the Profile section. 2-4 sentences recommended.",
+  "blog_config": {
+    "__ enabled __": "Set to true to show the Blog link in navigation, false to hide it. Requires posts in _posts/ to function.",
+    "enabled": true
+  },
   "bio": "A passionate developer who loves building things. Write something genuine here.",
 
   "__ SOCIAL LINKS __": "Displayed as Shields.io badges in the Contact section. Add or remove entries freely.",

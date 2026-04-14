@@ -10,6 +10,9 @@
   },
 
   "available_for_work": true,
+  "blog_config": {
+    "enabled": true
+  },
 
   "name": "Sri Satya Lokesh",
   "headline": "Full Stack Developer · Open Source Enthusiast · Builder",

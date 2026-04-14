@@ -12,7 +12,7 @@
       <li><a href="#skills"          class="nav__link">Skills</a></li>
       <li><a href="#projects"        class="nav__link">Projects</a></li>
       <li><a href="#contact"         class="nav__link">Contact</a></li>
-      {% if site.posts.size > 0 %}
+      {% if site.data.profile.blog_config.enabled %}
         <li><a href="{{ '/blog/' | relative_url }}" class="nav__link">Blog</a></li>
       {% endif %}
     </ul>

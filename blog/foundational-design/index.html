@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Portfolio-as-Code — A Jekyll developer portfolio template. Fork, fill JSON, deploy." />
+<title>Sri Satya Lokesh | Portfolio</title>
+
+<!-- FOUC Prevention: inject CSS variables and initial theme before stylesheet loads -->
+<style>
+  :root {
+    --color-primary:   #0d1117;
+    --color-secondary: #161b22;
+    --color-accent:    #58a6ff;
+  }
+</style>
+<script>
+  // Apply saved theme preference before any paint to prevent FOUC
+  (function() {
+    var saved = localStorage.getItem('devfolio-theme');
+    var jsonDefault = 'dark';
+    var theme = saved || jsonDefault;
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+
+<!-- Google Fonts: Space Grotesk + Archivo -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="/devfolio/assets/css/main.css" />
+
+  <body>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav__inner">
+    <a href="/devfolio/#hero" class="nav__brand">
+      Sri Satya Lokesh
+    </a>
+
+    <ul class="nav__links" role="list" id="nav-links">
+      <div class="nav__indicator"></div>
+      <li><a href="/devfolio/#profile"         class="nav__link">About</a></li>
+      <li><a href="/devfolio/#experience"      class="nav__link">Experience</a></li>
+      <li><a href="/devfolio/#education"       class="nav__link">Education</a></li>
+      <li><a href="/devfolio/#skills"          class="nav__link">Skills</a></li>
+      <li><a href="/devfolio/#projects"        class="nav__link">Projects</a></li>
+      <li><a href="/devfolio/#contact"         class="nav__link">Contact</a></li>
+      
+        <li><a href="/devfolio/blog/" class="nav__link">Blog</a></li>
+      
+    </ul>
+
+    <div class="nav__actions">
+      <!-- Dark/Light mode toggle -->
+      <button
+        id="theme-toggle"
+        class="nav__theme-toggle"
+        aria-label="Toggle dark/light mode"
+        title="Toggle theme"
+      >
+        <!-- Sun icon (light mode) -->
+        <svg class="icon icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon (dark mode) -->
+        <svg class="icon icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="nav-toggle"
+        class="nav__hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+    <main>
+      <div class="reading-progress" aria-hidden="true">
+  <div class="reading-progress__bar" id="reading-progress"></div>
+</div>
+
+<article class="post">
+  <header class="post-hero">
+    <div class="container container--immersive">
+      
+        <div class="post-featured-image interactive-glow">
+          <img src="/devfolio/assets/img/blog-design-2026.png" alt="Foundational Design: Architecting for 2026" loading="lazy">
+        </div>
+      
+
+      <div class="post-meta">
+        <span class="badge">Article</span>
+        <time datetime="2026-04-14T03:30:00+00:00" class="post-date">
+          April 14, 2026
+        </time>
+        <span class="post-reading-time">
+          
+          
+            1 min read
+          
+        </span>
+      </div>
+      <h1 class="post-title">Foundational Design: Architecting for 2026</h1>
+      
+        <p class="post-description">Exploring the shift from static minimalist grids to immersive 'Liquid Glass' publication standards.</p>
+      
+    </div>
+  </header>
+
+  <div class="container container--immersive">
+    <div class="post-content card glass">
+      <p>The landscape of digital self-expression is shifting. In 2026, we’ve moved beyond the “frosty card” aesthetics of the early 2020s into what we call <strong>Liquid Glass</strong>—a design language defined by dynamic reflections, spatial depth, and responsive lighting.</p>
+
+<h2 id="the-pillars-of-modern-editorial">The Pillars of Modern Editorial</h2>
+<ol>
+  <li><strong>Spatial Depth</strong>: Interfaces are no longer flat. We use varying blur levels and subtle X-axis rotations to create a sense of physical plausibility.</li>
+  <li><strong>Dynamic Reflex</strong>: The “Glow” is interactive. As users scroll, lighting shifts to follow focus, creating a tactile connection.</li>
+  <li><strong>Typography as Structure</strong>: We move away from small, safe grids toward expansive, rhythmic type that commands attention.</li>
+</ol>
+
+<blockquote>
+  <p>“Design is not just what it looks like; it’s how it moves and breathes in a spatial environment.”</p>
+</blockquote>
+
+<p>In DevFolio, this philosophy is embedded in our SCSS tokens. By using <code class="language-plaintext highlighter-rouge">color-mix</code> and multi-layered <code class="language-plaintext highlighter-rouge">backdrop-filter</code> chains, we achieve a high-fidelity look that remains performant on mobile hardware.</p>
+
+<p>Stay tuned for more updates on how we’re pushing these boundaries further.</p>
+
+    </div>
+
+    <footer class="post-footer">
+      <div class="post-recommendations">
+        <h3 class="post-recommendations__title">Explore More Insights</h3>
+        <div class="blog-grid blog-grid--mini">
+          
+          
+            <article class="blog-card blog-card--span-4">
+              <a href="/devfolio/blog/elite-restore-features/" class="blog-card__link">
+                <div class="blog-card__content interactive-glow">
+                  <div class="blog-card__image-wrap">
+                    <img src="/devfolio/assets/img/blog-restoration.png" alt="Exploring Elite Restoration: GSAP, Vanta, and Glassmorphism" class="blog-card__image" loading="lazy">
+                  </div>
+                  <h4 class="blog-card__title">Exploring Elite Restoration: GSAP, Vanta, and Glassmorphism</h4>
+                </div>
+              </a>
+            </article>
+          
+            <article class="blog-card blog-card--span-4">
+              <a href="/devfolio/blog/vanta-performance/" class="blog-card__link">
+                <div class="blog-card__content interactive-glow">
+                  <div class="blog-card__image-wrap">
+                    <img src="/devfolio/assets/img/blog-vanta-performance.png" alt="Vanta.js Performance: Engineering Motion" class="blog-card__image" loading="lazy">
+                  </div>
+                  <h4 class="blog-card__title">Vanta.js Performance: Engineering Motion</h4>
+                </div>
+              </a>
+            </article>
+          
+            <article class="blog-card blog-card--span-4">
+              <a href="/devfolio/blog/introducing-devfolio/" class="blog-card__link">
+                <div class="blog-card__content interactive-glow">
+                  <div class="blog-card__image-wrap">
+                    <img src="/devfolio/assets/img/blog-revolution.png" alt="DevFolio: The Portfolio-as-Code Revolution" class="blog-card__image" loading="lazy">
+                  </div>
+                  <h4 class="blog-card__title">DevFolio: The Portfolio-as-Code Revolution</h4>
+                </div>
+              </a>
+            </article>
+          
+        </div>
+      </div>
+      <div class="post-pagination">
+        
+          <a href="/devfolio/blog/elite-restore-features/" class="post-pagination__link post-pagination__link--prev">
+            <span class="label">Previous Article</span>
+            <span class="title">Exploring Elite Restoration: GSAP, Va...</span>
+          </a>
+        
+
+        
+          <a href="/devfolio/blog/vanta-performance/" class="post-pagination__link post-pagination__link--next">
+            <span class="label">Next Article</span>
+            <span class="title">Vanta.js Performance: Engineering Motion</span>
+          </a>
+        
+      </div>
+
+      <div class="post-back">
+        <a href="/devfolio/blog/" class="btn btn--secondary">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+          </svg>
+          Back to Insights
+        </a>
+      </div>
+    </footer>
+  </div>
+</article>
+
+    </main>
+    <footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__left">
+      <p class="footer__copy">
+        &copy; 2026 Sri Satya Lokesh. All rights reserved.
+      </p>
+      <p class="footer__credit">
+        Built with <a href="https://github.com/SriSatyaLokesh/devfolio" target="_blank" rel="noopener">DevFolio</a>
+        &mdash; Portfolio-as-Code.
+      </p>
+    </div>
+
+    <div class="footer__right">
+      <a href="#hero" class="footer__back-to-top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+    
+    
+      
+
+
+<!-- Load Vanta Dependencies -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+
+<!-- Load the specific Vanta effect from CDN -->
+<script defer src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+
+<script>
+  window.initVanta = function() {
+    if (window.DEV_FOLIO_VANTA) {
+      window.DEV_FOLIO_VANTA.destroy();
+    }
+
+    // Surgical color helper for Vanta/Three.js
+    const colorToNum = (hex) => {
+      if (!hex) return 0x000000;
+      return parseInt(hex.replace("#", "0x"), 16);
+    };
+
+    const effectKey = 'BIRDS';
+    const accentStr = "#58a6ff";
+    const primaryStr = "#0d1117";
+    
+    // Theme detection
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const bgStr = isLight ? '#f0f4f8' : primaryStr;
+
+    // Numeric versions
+    const accent = colorToNum(accentStr);
+    const bg = colorToNum(bgStr);
+
+    let config = {
+      el: "#hero",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      backgroundColor: bg,
+      color: accent
+    };
+
+    // Precision tuning for every effect
+    switch(effectKey) {
+      case 'BIRDS':
+        config.color1 = accent;
+        config.color2 = accent; // Force monochromatic
+        config.colorMode = "lerp";
+        config.birdSize = 1.2;
+        break;
+      case 'WAVES':
+        config.color = accent;
+        config.backgroundColor = bg;
+        config.shininess = isLight ? 50 : 150; 
+        config.waveHeight = 35.0;
+        config.waveSpeed = 1.0;
+        config.zoom = 0.8;
+        break;
+      case 'FOG':
+        config.highlightColor = accent;
+        config.midtoneColor = accent;
+        config.lowlightColor = accent;
+        config.baseColor = bg;
+        break;
+      case 'NET':
+        config.color = accent;
+        config.backgroundColor = bg;
+        break;
+      case 'DOTS':
+        config.color = accent;
+        config.color2 = accent;
+        config.backgroundColor = bg;
+        config.size = 3.0;
+        config.spacing = 35.0;
+        break;
+      case 'CELLS':
+        config.color1 = accent;
+        config.color2 = accent;
+        break;
+      case 'CLOUDS':
+      case 'CLOUDS2':
+        // Clouds/Clouds2 are explicitly exempted from monochromatic force per user request
+        if (isLight) {
+          config.skyColor = 0x68b2e3;
+          config.cloudColor = 0xadc1d6;
+          config.cloudShadowColor = 0x183550;
+          config.sunColor = 0xff9919;
+          config.sunGlareColor = 0xff6633;
+          config.sunlightColor = 0xff9933;
+        } else {
+          config.skyColor = colorToNum(effectKey === 'CLOUDS2' ? '#0d1117' : bgStr);
+          config.cloudColor = colorToNum('#334155');
+          config.cloudShadowColor = colorToNum('#1e293b');
+          config.sunColor = accent;
+        }
+        config.speed = 1.2;
+        if (effectKey === 'CLOUDS2' && !isLight) {
+          config.lightColor = accent;
+        }
+        break;
+      case 'TOPOLOGY':
+        config.color = accent;
+        config.backgroundColor = bg;
+        config.speed = 6.0;
+        break;
+      case 'RINGS':
+        // Rings is explicitly exempted but follows accent where applicable
+        config.color = accent;
+        config.backgroundColor = bg;
+        break;
+      case 'HALO':
+        const haloBgStr = isLight ? '#94a3b8' : bgStr;
+        config.backgroundColor = colorToNum(haloBgStr);
+        config.baseColor = colorToNum(haloBgStr);
+        config.color2 = accent;
+        config.color = accent;
+        config.amplitudeFactor = 2.0;
+        break;
+      default:
+        break;
+    }
+
+    try {
+      if (typeof VANTA !== 'undefined' && typeof VANTA[effectKey] === 'function') {
+        const instance = VANTA[effectKey](config);
+        
+        // Post-init hijacking to force monochromatic sync on problematic effects
+        if (effectKey === 'RINGS' || effectKey === 'HALO') {
+          if (instance.colors) instance.colors = [accent, accent];
+          if (instance.options) {
+            instance.options.color = accent;
+            instance.options.color2 = accent;
+          }
+          if (typeof instance.restart === 'function') instance.restart();
+        }
+        
+        window.DEV_FOLIO_VANTA = instance;
+      } else {
+        if (effectKey !== 'NET' && typeof VANTA !== 'undefined' && typeof VANTA.NET === 'function') {
+           window.DEV_FOLIO_VANTA = VANTA.NET(config);
+        }
+      }
+    } catch(err) {
+      console.error("Vanta initialization failed:", err);
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', window.initVanta);
+</script>
+
+    
+
+    <!-- Interactions -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="/devfolio/assets/js/smooth-scroll.js"></script>
+    <script defer src="/devfolio/assets/js/gsap-animations.js"></script>
+  </body>
+</html>

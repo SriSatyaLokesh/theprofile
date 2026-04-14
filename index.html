@@ -3,7 +3,14 @@
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Portfolio-as-Code — A Jekyll developer portfolio template. Fork, fill JSON, deploy." />
-<title>Sri Satya Lokesh | Portfolio</title>
+<title>DevFolio | Portfolio</title>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/devfolio/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/devfolio/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/devfolio/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/devfolio/assets/img/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/devfolio/assets/img/favicon/favicon.ico">
 
 <!-- FOUC Prevention: inject CSS variables and initial theme before stylesheet loads -->
 <style>
@@ -35,7 +42,9 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="container nav__inner">
     <a href="/devfolio/#hero" class="nav__brand">
-      Sri Satya Lokesh
+      
+        <img src="/devfolio/assets/img/devfolio.png" alt="Logo" class="nav__logo-img">
+      
     </a>
 
     <ul class="nav__links" role="list" id="nav-links">
@@ -116,13 +125,13 @@
     </div>
     
     
-    <h1 class="hero__name">Sri Satya Lokesh</h1>
+    <h1 class="hero__name">DevFolio</h1>
     
     <p class="hero__headline" data-gsap="hero-headline">
-      Full Stack Developer · Open Source Enthusiast · Builder<span class="typing-dots"></span>
+      The Portfolio-as-Code Template that builds itself. Zero HTML. Maximum Impact.<span class="typing-dots"></span>
     </p>
     <div class="hero__cta-group">
-      <a id="hero-resume-btn" href="/assets/resume.pdf" class="hero__cta hero__cta--primary" target="_blank" rel="noopener noreferrer">
+      <a id="hero-resume-btn" href="https://github.com/SriSatyaLokesh/devfolio" class="hero__cta hero__cta--primary" target="_blank" rel="noopener noreferrer">
         View Resume
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       </a>
@@ -135,8 +144,8 @@
   <div class="container profile__inner">
     <div class="profile__image-wrap">
       <img
-        src="https://avatars.githubusercontent.com/u/0"
-        alt="Sri Satya Lokesh"
+        src="./assets/img/logo.jpg"
+        alt="DevFolio"
         class="profile__image"
         width="280"
         height="280"
@@ -144,7 +153,7 @@
     </div>
     <div class="profile__content">
       <h2 class="section-title">About Me</h2>
-      <p class="profile__bio">I'm a full-stack developer who obsesses over developer experience, clean architecture, and products that scale. I've shipped production systems serving millions of users, led open-source projects with global contributors, and never stop learning. When I'm not deploying, I'm writing, mentoring, or exploring the next tool that changes how we build.</p>
+      <p class="profile__bio">I am a high-fidelity, single-page Jekyll template born from a deep-seated hatred for drag-and-drop builders. I live in a single JSON file and dream of pixel-perfect glassmorphism. I don't need a CV; I am the CV. I'm here to ensure your career looks like it was built by a team of Silicon Valley designers, even if you just finished your second coffee.</p>
     </div>
   </div>
 </section>
@@ -158,23 +167,23 @@
       
         <article class="experience__item">
           <div class="experience__header">
-            <h3 class="experience__role">Software Engineer II</h3>
-            <span class="experience__duration">Jan 2025 – Present</span>
+            <h3 class="experience__role">Senior Portfolio Engine</h3>
+            <span class="experience__duration">Jan 2026 – Present</span>
           </div>
           
-          <a href="https://acmecorp.com" class="experience__company" target="_blank" rel="noopener">Acme Corp</a>
+          <a href="https://pages.github.com" class="experience__company" target="_blank" rel="noopener">GitHub Pages</a>
           
           
           
             <ul class="experience__description-list">
               
-                <li>Architected and deployed a distributed event-streaming pipeline on AWS Kinesis processing 12M+ events/day with sub-50ms p99 latency.</li>
+                <li>Automated the career glow-up of thousands of developers by providing 6 interactable WebGL backgrounds they didn't know they needed.</li>
               
-                <li>Led a cross-functional squad of 6 engineers to migrate a monolith to domain-driven microservices — reducing deployment time from 40 min to under 4 min.</li>
+                <li>Reduced 'Time to Landing Page' from weeks of CSS wrestling to 3 minutes of JSON editing — causing a 400% increase in developer confidence.</li>
               
-                <li>Introduced a comprehensive E2E testing framework with Playwright, reducing critical regressions by 70% across all CI runs.</li>
+                <li>Successfully defended the 'Portfolio-as-Code' philosophy against the invading forces of drag-and-drop website builders.</li>
               
-                <li>Mentored 2 junior engineers via weekly code reviews and pair programming sessions, accelerating their growth to mid-level in under 8 months.</li>
+                <li>Implemented a 'Secret Shockwave' Easter Egg that randomizes backgrounds and user life choices simultaneously.</li>
               
             </ul>
           
@@ -182,47 +191,23 @@
       
         <article class="experience__item">
           <div class="experience__header">
-            <h3 class="experience__role">Software Engineer I</h3>
-            <span class="experience__duration">Jan 2024 – Dec 2024</span>
+            <h3 class="experience__role">Lead CSS Wrestler</h3>
+            <span class="experience__duration">Oct 2025 – Present</span>
           </div>
           
-          <a href="https://acmecorp.com" class="experience__company" target="_blank" rel="noopener">Acme Corp</a>
+          <a href="https://www.w3.org" class="experience__company" target="_blank" rel="noopener">The Internet</a>
           
           
           
             <ul class="experience__description-list">
               
-                <li>Built and scaled RESTful microservices in Node.js + PostgreSQL handling 10M+ requests/day with 99.97% uptime SLA.</li>
+                <li>Centering a <div> while simultaneously maintaining Backdrop Blur (12px) without causing a browser meltdown.</li>
               
-                <li>Designed and implemented an internal CLI tool (published to npm) used by 40+ engineers to scaffold service boilerplate in seconds.</li>
+                <li>Optimized GSAP entrance choreography to be 45% more 'satisfying' according to highly scientific internal audits.</li>
               
-                <li>Optimized database query plans, reducing average API response time by 35% on the critical checkout path.</li>
+                <li>Engineered a glassmorphism navigation system so floating it actually feels like it's made of real glass (without the risk of cuts).</li>
               
-                <li>Owned the on-call rotation for three production services and resolved 15+ P0 incidents with RCAs.</li>
-              
-            </ul>
-          
-        </article>
-      
-        <article class="experience__item">
-          <div class="experience__header">
-            <h3 class="experience__role">Frontend Developer Intern</h3>
-            <span class="experience__duration">Jun 2023 – Dec 2023</span>
-          </div>
-          
-          <a href="https://startupxyz.io" class="experience__company" target="_blank" rel="noopener">StartupXYZ</a>
-          
-          
-          
-            <ul class="experience__description-list">
-              
-                <li>Rebuilt the customer dashboard from scratch in React 18 + TypeScript, cutting bundle size by 48% with code splitting and tree-shaking.</li>
-              
-                <li>Improved Core Web Vitals scores (LCP, CLS, FID) by 40% — directly contributing to a 12% improvement in organic search ranking.</li>
-              
-                <li>Shipped 3 major feature releases in 6 months in an agile team of 8, consistently meeting sprint commitments.</li>
-              
-                <li>Collaborated with UX designers to implement a fully accessible (WCAG 2.1 AA) component library from Figma specs.</li>
+                <li>Wrote 1,000+ lines of SCSS using CSS Custom Properties so users don't have to look at hex codes ever again.</li>
               
             </ul>
           
@@ -241,22 +226,40 @@
       
         <article class="education__item" style="animation-delay: 0ms">
           <div class="education__header">
-            <h3 class="education__degree">B.Tech in Computer Science & Engineering</h3>
-            <span class="education__year">2024</span>
+            <h3 class="education__degree">PhD in Zero-Code Architecture</h3>
+            <span class="education__year">2026</span>
           </div>
-          <span class="education__institution">XYZ University</span>
+          <span class="education__institution">University of Open Source</span>
           
           
             
               <ul class="experience__description-list">
                 
-                  <li>Graduated with First Class Distinction — CGPA 8.9/10.</li>
+                  <li>Defended a groundbreaking thesis on why developers should spend time coding features, not fighting with HTML boilerplate.</li>
                 
-                  <li>Published undergraduate research on distributed consensus algorithms in the IEEE Student Journal.</li>
+                  <li>Minor in 'Monochromatic Theme Synchronization' — proving that any website looks elite with the right accent color.</li>
                 
-                  <li>Led the ACM Student Chapter as President for 2 years — organized 10+ technical workshops attended by 500+ students.</li>
+                  <li>Dean's List for 'Most Optimized Jekyll Build Time' (2025).</li>
                 
-                  <li>Winner — Inter-University Hackathon 2023 (Smart City Track) with a real-time traffic optimization system.</li>
+              </ul>
+            
+          
+        </article>
+      
+        <article class="education__item" style="animation-delay: 150ms">
+          <div class="education__header">
+            <h3 class="education__degree">Master of Portfolio Automation</h3>
+            <span class="education__year">2025</span>
+          </div>
+          <span class="education__institution">Self-Taught via SriSatyaLokesh</span>
+          
+          
+            
+              <ul class="experience__description-list">
+                
+                  <li>Mastered the art of JSON-to-Elite-Portfolio transformation.</li>
+                
+                  <li>Learned to orchestrate GSAP and Vanta.js for maximum cinematic impact.</li>
                 
               </ul>
             
@@ -280,9 +283,9 @@
         
         
 
-        <article class="skills-card skills-card--span-8">
+        <article class="skills-card skills-card--span-6">
           <div class="skills-card__content">
-            <h3 class="skills-card__category">Frontend</h3>
+            <h3 class="skills-card__category">Frontend Soul</h3>
             <div class="skills-card__list">
               
                 
@@ -292,15 +295,15 @@
 
 
 
-<div class="tech-chip" data-tech="react">
+<div class="tech-chip" data-tech="jekyll">
   <img 
-    src="https://cdn.simpleicons.org/react" 
+    src="https://cdn.simpleicons.org/jekyll" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">React</span>
+  <span class="tech-chip__label">Jekyll</span>
 </div>
 
               
@@ -311,15 +314,15 @@
 
 
 
-<div class="tech-chip" data-tech="next.js">
+<div class="tech-chip" data-tech="liquid magic">
   <img 
-    src="https://cdn.simpleicons.org/nextdotjs" 
+    src="https://cdn.simpleicons.org/liquid" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">Next.js</span>
+  <span class="tech-chip__label">Liquid Magic</span>
 </div>
 
               
@@ -330,15 +333,15 @@
 
 
 
-<div class="tech-chip" data-tech="typescript">
+<div class="tech-chip" data-tech="scss architect">
   <img 
-    src="https://cdn.simpleicons.org/typescript" 
+    src="https://cdn.simpleicons.org/sass" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">TypeScript</span>
+  <span class="tech-chip__label">SCSS Architect</span>
 </div>
 
               
@@ -349,15 +352,15 @@
 
 
 
-<div class="tech-chip" data-tech="tailwind css">
+<div class="tech-chip" data-tech="gsap moves">
   <img 
-    src="https://cdn.simpleicons.org/tailwindcss" 
+    src="https://cdn.simpleicons.org/greensock" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">Tailwind CSS</span>
+  <span class="tech-chip__label">GSAP Moves</span>
 </div>
 
               
@@ -369,9 +372,9 @@
         
         
 
-        <article class="skills-card skills-card--span-4">
+        <article class="skills-card skills-card--span-6">
           <div class="skills-card__content">
-            <h3 class="skills-card__category">Backend</h3>
+            <h3 class="skills-card__category">Data Brain</h3>
             <div class="skills-card__list">
               
                 
@@ -381,15 +384,15 @@
 
 
 
-<div class="tech-chip" data-tech="node.js">
+<div class="tech-chip" data-tech="json schema">
   <img 
-    src="https://cdn.simpleicons.org/nodedotjs" 
+    src="https://cdn.simpleicons.org/json" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">Node.js</span>
+  <span class="tech-chip__label">JSON Schema</span>
 </div>
 
               
@@ -400,166 +403,7 @@
 
 
 
-<div class="tech-chip" data-tech="express">
-  <img 
-    src="https://cdn.simpleicons.org/express" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">Express</span>
-</div>
-
-              
-                
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="go">
-  <img 
-    src="https://cdn.simpleicons.org/go" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">Go</span>
-</div>
-
-              
-                
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="postgresql">
-  <img 
-    src="https://cdn.simpleicons.org/postgresql" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">PostgreSQL</span>
-</div>
-
-              
-            </div>
-          </div>
-        </article>
-      
-        
-        
-        
-
-        <article class="skills-card skills-card--span-4">
-          <div class="skills-card__content">
-            <h3 class="skills-card__category">DevOps & Cloud</h3>
-            <div class="skills-card__list">
-              
-                
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="aws">
-  <img 
-    src="https://cdn.simpleicons.org/amazonaws" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">AWS</span>
-</div>
-
-              
-                
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="docker">
-  <img 
-    src="https://cdn.simpleicons.org/docker" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">Docker</span>
-</div>
-
-              
-                
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="kubernetes">
-  <img 
-    src="https://cdn.simpleicons.org/kubernetes" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">Kubernetes</span>
-</div>
-
-              
-                
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="github actions">
-  <img 
-    src="https://cdn.simpleicons.org/githubactions" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">GitHub Actions</span>
-</div>
-
-              
-            </div>
-          </div>
-        </article>
-      
-        
-        
-        
-
-        <article class="skills-card skills-card--span-8">
-          <div class="skills-card__content">
-            <h3 class="skills-card__category">Tools</h3>
-            <div class="skills-card__list">
-              
-                
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="git">
+<div class="tech-chip" data-tech="git workflows">
   <img 
     src="https://cdn.simpleicons.org/git" 
     alt="" 
@@ -567,7 +411,7 @@
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">Git</span>
+  <span class="tech-chip__label">Git Workflows</span>
 </div>
 
               
@@ -578,15 +422,15 @@
 
 
 
-<div class="tech-chip" data-tech="figma">
+<div class="tech-chip" data-tech="actions automation">
   <img 
-    src="https://cdn.simpleicons.org/figma" 
+    src="https://cdn.simpleicons.org/githubactions" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">Figma</span>
+  <span class="tech-chip__label">Actions Automation</span>
 </div>
 
               
@@ -597,15 +441,47 @@
 
 
 
-<div class="tech-chip" data-tech="playwright">
+<div class="tech-chip" data-tech="yaml whispering">
   <img 
-    src="https://cdn.simpleicons.org/playwright" 
+    src="https://cdn.simpleicons.org/yaml" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">Playwright</span>
+  <span class="tech-chip__label">YAML Whispering</span>
+</div>
+
+              
+            </div>
+          </div>
+        </article>
+      
+        
+        
+        
+
+        <article class="skills-card skills-card--span-12">
+          <div class="skills-card__content">
+            <h3 class="skills-card__category">Visual Heart</h3>
+            <div class="skills-card__list">
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="vanta.js">
+  <img 
+    src="https://cdn.simpleicons.org/visualstudio" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Vanta.js</span>
 </div>
 
               
@@ -616,15 +492,53 @@
 
 
 
-<div class="tech-chip" data-tech="postman">
+<div class="tech-chip" data-tech="three.js">
   <img 
-    src="https://cdn.simpleicons.org/postman" 
+    src="https://cdn.simpleicons.org/threejs" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">Postman</span>
+  <span class="tech-chip__label">Three.js</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="webgl">
+  <img 
+    src="https://cdn.simpleicons.org/webgl" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">WebGL</span>
+</div>
+
+              
+                
+                
+                
+                
+
+
+
+<div class="tech-chip" data-tech="glassmorphism">
+  <img 
+    src="https://cdn.simpleicons.org/css3" 
+    alt="" 
+    class="tech-chip__icon" 
+    loading="lazy"
+    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
+  >
+  <span class="tech-chip__label">Glassmorphism</span>
 </div>
 
               
@@ -649,7 +563,7 @@
           
             <div class="project-card__image-container">
               <img
-                src="/devfolio/assets/img/projects/project-1.png"
+                src="/devfolio/assets/img/devfolio.png"
                 alt="DevFolio"
                 class="project-card__image"
                 loading="lazy"
@@ -660,7 +574,7 @@
 
           <div class="project-card__content">
             <h3 class="project-card__title">DevFolio</h3>
-            <p class="project-card__description">A Jekyll-based Portfolio-as-Code template. Fork it, fill one JSON file, and deploy to GitHub Pages — zero HTML knowledge required.</p>
+            <p class="project-card__description">A high-fidelity Portfolio-as-Code template for developers. Focus on your content in a single JSON file while the engine handles elite design, cinematic audio, and WebGL backgrounds.</p>
 
             <div class="project-card__stack">
               
@@ -706,15 +620,15 @@
 
 
 
-<div class="tech-chip" data-tech="javascript">
+<div class="tech-chip" data-tech="gsap">
   <img 
-    src="https://cdn.simpleicons.org/javascript" 
+    src="https://cdn.simpleicons.org/greensock" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">JavaScript</span>
+  <span class="tech-chip__label">GSAP</span>
 </div>
 
               
@@ -727,7 +641,7 @@
                 </a>
               
               
-                <a href="https://srisatyalokesh.github.io/devfolio" class="project-link project-link--primary" target="_blank" rel="noopener">
+                <a href="https://srisatyalokesh.github.io/devfolio/" class="project-link project-link--primary" target="_blank" rel="noopener">
                   <span>Visit site</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                 </a>
@@ -741,8 +655,8 @@
           
             <div class="project-card__image-container">
               <img
-                src="https://via.placeholder.com/600x340/0d1117/58a6ff?text=OpenAPI+Explorer"
-                alt="OpenAPI Explorer"
+                src="https://srisatyalokesh.github.io/open-certificate-generator/assets/img/og-default.jpg"
+                alt="Open Certificate Generator"
                 class="project-card__image"
                 loading="lazy"
               />
@@ -751,8 +665,8 @@
           
 
           <div class="project-card__content">
-            <h3 class="project-card__title">OpenAPI Explorer</h3>
-            <p class="project-card__description">A visual, browser-based tool for exploring, testing, and mocking REST APIs directly from any OpenAPI 3.x specification.</p>
+            <h3 class="project-card__title">Open Certificate Generator</h3>
+            <p class="project-card__description">An automated bulk certificate generation engine. Designed for hackathons and organizations to generate branded, professional certificates from raw data in seconds.</p>
 
             <div class="project-card__stack">
               
@@ -780,15 +694,15 @@
 
 
 
-<div class="tech-chip" data-tech="typescript">
+<div class="tech-chip" data-tech="canvas api">
   <img 
-    src="https://cdn.simpleicons.org/typescript" 
+    src="https://cdn.simpleicons.org/html5" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">TypeScript</span>
+  <span class="tech-chip__label">Canvas API</span>
 </div>
 
               
@@ -814,10 +728,15 @@
 
             <div class="project-card__links">
               
-                <a href="https://github.com/SriSatyaLokesh/openapi-explorer" class="project-link" target="_blank" rel="noopener">
+                <a href="https://github.com/SriSatyaLokesh/open-certificate-generator" class="project-link" target="_blank" rel="noopener">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-4.51-1.5-7-2"/></svg>
                 </a>
               
+              
+                <a href="https://srisatyalokesh.github.io/open-certificate-generator/" class="project-link project-link--primary" target="_blank" rel="noopener">
+                  <span>Visit site</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                </a>
               
             </div>
           </div>
@@ -828,8 +747,8 @@
           
             <div class="project-card__image-container">
               <img
-                src="/devfolio/assets/img/projects/project-3.png"
-                alt="FlowDB"
+                src="https://images.ctfassets.net/8aevphvgewt8/2Zamxo7a7F9K9jsTAl2EGA/bce1f04a40536e89ef543cb311f2968b/github-copilot-cli.png"
+                alt="Copilot Team Workflow"
                 class="project-card__image"
                 loading="lazy"
               />
@@ -838,8 +757,8 @@
           
 
           <div class="project-card__content">
-            <h3 class="project-card__title">FlowDB</h3>
-            <p class="project-card__description">A lightweight, schema-first query builder for PostgreSQL with type-safe relations, migrations, and an interactive query playground.</p>
+            <h3 class="project-card__title">Copilot Team Workflow</h3>
+            <p class="project-card__description">A comprehensive framework of standards and workflows for maximizing team velocity with GitHub Copilot. Includes optimized prompts and pair-programming patterns for elite teams.</p>
 
             <div class="project-card__stack">
               
@@ -849,15 +768,15 @@
 
 
 
-<div class="tech-chip" data-tech="typescript">
+<div class="tech-chip" data-tech="ai prompts">
   <img 
-    src="https://cdn.simpleicons.org/typescript" 
+    src="https://cdn.simpleicons.org/openai" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">TypeScript</span>
+  <span class="tech-chip__label">AI Prompts</span>
 </div>
 
               
@@ -867,15 +786,15 @@
 
 
 
-<div class="tech-chip" data-tech="postgresql">
+<div class="tech-chip" data-tech="workflows">
   <img 
-    src="https://cdn.simpleicons.org/postgresql" 
+    src="https://cdn.simpleicons.org/github" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">PostgreSQL</span>
+  <span class="tech-chip__label">Workflows</span>
 </div>
 
               
@@ -885,15 +804,15 @@
 
 
 
-<div class="tech-chip" data-tech="go">
+<div class="tech-chip" data-tech="git">
   <img 
-    src="https://cdn.simpleicons.org/go" 
+    src="https://cdn.simpleicons.org/git" 
     alt="" 
     class="tech-chip__icon" 
     loading="lazy"
     onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
   >
-  <span class="tech-chip__label">Go</span>
+  <span class="tech-chip__label">Git</span>
 </div>
 
               
@@ -901,102 +820,15 @@
 
             <div class="project-card__links">
               
-                <a href="https://github.com/SriSatyaLokesh/flowdb" class="project-link" target="_blank" rel="noopener">
+                <a href="https://github.com/SriSatyaLokesh/copilot-team-workflow" class="project-link" target="_blank" rel="noopener">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-4.51-1.5-7-2"/></svg>
                 </a>
               
               
-                <a href="https://flowdb.dev" class="project-link project-link--primary" target="_blank" rel="noopener">
+                <a href="https://srisatyalokesh.github.io/copilot-team-workflow/" class="project-link project-link--primary" target="_blank" rel="noopener">
                   <span>Visit site</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
                 </a>
-              
-            </div>
-          </div>
-        </article>
-      
-        
-        <article class="project-card" data-index="3">
-          
-            <div class="project-card__image-container">
-              <img
-                src="https://via.placeholder.com/600x340/0d1117/58a6ff?text=Synthwave+CLI"
-                alt="Synthwave CLI"
-                class="project-card__image"
-                loading="lazy"
-              />
-              <div class="project-card__overlay"></div>
-            </div>
-          
-
-          <div class="project-card__content">
-            <h3 class="project-card__title">Synthwave CLI</h3>
-            <p class="project-card__description">An AI-powered terminal assistant that generates, explains, and debugs shell commands in natural language — built on top of Gemini API.</p>
-
-            <div class="project-card__stack">
-              
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="python">
-  <img 
-    src="https://cdn.simpleicons.org/python" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">Python</span>
-</div>
-
-              
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="gemini api">
-  <img 
-    src="https://cdn.simpleicons.org/google" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">Gemini API</span>
-</div>
-
-              
-                
-                
-                
-
-
-
-<div class="tech-chip" data-tech="rich">
-  <img 
-    src="https://cdn.simpleicons.org/python" 
-    alt="" 
-    class="tech-chip__icon" 
-    loading="lazy"
-    onerror="this.src='https://cdn.simpleicons.org/simpleicons'"
-  >
-  <span class="tech-chip__label">Rich</span>
-</div>
-
-              
-            </div>
-
-            <div class="project-card__links">
-              
-                <a href="https://github.com/SriSatyaLokesh/synthwave-cli" class="project-link" target="_blank" rel="noopener">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-4.51-1.5-7-2"/></svg>
-                </a>
-              
               
             </div>
           </div>
@@ -1015,20 +847,20 @@
       
         <article class="rec-card">
           <blockquote class="rec-card__quote">
-            <p>Lokesh is one of the sharpest engineers I've had the pleasure of working with. He approaches every problem with genuine intellectual curiosity, and his ability to rapidly prototype an idea and then harden it for production sets him apart from most candidates I've interviewed in 10+ years of hiring.</p>
+            <p>I built DevFolio specifically to solve my own frustration with complex portfolio maintenance. Pro-tip: Double-click the 'Available for opportunities' badge for a little surprise.</p>
           </blockquote>
           <footer class="rec-card__footer">
-            <strong class="rec-card__name">Jane Doe</strong>
+            <strong class="rec-card__name">SriSatyaLokesh</strong>
             
-              <span class="rec-card__title">Engineering Manager at Acme Corp</span>
+              <span class="rec-card__title">Creator of DevFolio</span>
             
             
               <a
-                href="https://linkedin.com/in/janedoe"
+                href="https://www.linkedin.com/in/srisatyalokesh"
                 class="rec-card__linkedin"
                 target="_blank"
                 rel="noopener"
-                aria-label="View Jane Doe's LinkedIn profile"
+                aria-label="View SriSatyaLokesh's LinkedIn profile"
               >LinkedIn &rarr;</a>
             
           </footer>
@@ -1036,12 +868,12 @@
       
         <article class="rec-card">
           <blockquote class="rec-card__quote">
-            <p>One of the most motivated developers I have mentored. What separates Lokesh is not just technical ability — it's that he genuinely cares about the craft. He reads RFCs for fun. His code reviews are the most thorough on the team.</p>
+            <p>DevFolio is so good, it actually convinced me to stop using React for a simple landing page. My Lighthouse score is 100/100 and my hands are finally clean of node_modules.</p>
           </blockquote>
           <footer class="rec-card__footer">
-            <strong class="rec-card__name">John Smith</strong>
+            <strong class="rec-card__name">A Grateful Developer</strong>
             
-              <span class="rec-card__title">Staff Engineer at StartupXYZ</span>
+              <span class="rec-card__title">Escaped React Dev</span>
             
             
           </footer>
@@ -1049,21 +881,13 @@
       
         <article class="rec-card">
           <blockquote class="rec-card__quote">
-            <p>Lokesh co-founded our university hackathon team and led us to first place with an architecture that honestly surprised the judges. Cool under pressure, excellent communicator, and the kind of teammate everyone wants in a crunch.</p>
+            <p>The Portfolio-as-Code philosophy is exactly what I needed. I spend all day in VS Code; why would I want to build my site in a browser drag-and-drop tool?</p>
           </blockquote>
           <footer class="rec-card__footer">
-            <strong class="rec-card__name">Priya Patel</strong>
+            <strong class="rec-card__name">Backend Guru</strong>
             
-              <span class="rec-card__title">SDE II at Google</span>
+              <span class="rec-card__title">Senior YAML Architect</span>
             
-            
-              <a
-                href="https://linkedin.com/in/priyap"
-                class="rec-card__linkedin"
-                target="_blank"
-                rel="noopener"
-                aria-label="View Priya Patel's LinkedIn profile"
-              >LinkedIn &rarr;</a>
             
           </footer>
         </article>
@@ -1098,13 +922,13 @@
           <button
             id="copy-email-btn"
             class="contact__email-btn"
-            data-email="lokesh@example.com"
+            data-email="srisatyalokesh@duck.com"
             aria-label="Copy email address"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true" class="contact__email-icon">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
             </svg>
-            <span class="contact__email-text">lokesh@example.com</span>
+            <span class="contact__email-text">srisatyalokesh@duck.com</span>
             <svg class="contact__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
             </svg>
@@ -1124,7 +948,7 @@
         
           
             <a
-              href="https://github.com/SriSatyaLokesh"
+              href="https://github.com/SriSatyaLokesh/devfolio"
               class="contact__social-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -1138,7 +962,7 @@
 
               <div class="contact__social-info">
                 <span class="contact__social-name">GitHub</span>
-                <span class="contact__social-handle">github.com/SriSatyaLokesh</span>
+                <span class="contact__social-handle">github.com/SriSatyaLokesh/devfol</span>
               </div>
 
               <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
@@ -1149,32 +973,7 @@
         
           
             <a
-              href="https://linkedin.com/in/srisatyalokesh"
-              class="contact__social-card"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit my LinkedIn profile"
-            >
-              <div class="contact__social-icon" aria-hidden="true">
-                
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062-0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                  
-              </div>
-
-              <div class="contact__social-info">
-                <span class="contact__social-name">LinkedIn</span>
-                <span class="contact__social-handle">linkedin.com/in/srisatyalokesh</span>
-              </div>
-
-              <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
-                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-              </svg>
-            </a>
-          
-        
-          
-            <a
-              href="https://twitter.com/SriSatyaLokesh"
+              href="https://twitter.com"
               class="contact__social-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -1188,7 +987,7 @@
 
               <div class="contact__social-info">
                 <span class="contact__social-name">Twitter</span>
-                <span class="contact__social-handle">twitter.com/SriSatyaLokesh</span>
+                <span class="contact__social-handle">twitter.com</span>
               </div>
 
               <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
@@ -1199,7 +998,32 @@
         
           
             <a
-              href="https://dev.to/srisatyalokesh"
+              href="https://linkedin.com"
+              class="contact__social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit my LinkedIn profile"
+            >
+              <div class="contact__social-icon" aria-hidden="true">
+                
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062-0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  
+              </div>
+
+              <div class="contact__social-info">
+                <span class="contact__social-name">LinkedIn</span>
+                <span class="contact__social-handle">linkedin.com</span>
+              </div>
+
+              <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+          
+        
+          
+            <a
+              href="https://dev.to"
               class="contact__social-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -1213,32 +1037,7 @@
 
               <div class="contact__social-info">
                 <span class="contact__social-name">Dev.to</span>
-                <span class="contact__social-handle">dev.to/srisatyalokesh</span>
-              </div>
-
-              <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
-                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-              </svg>
-            </a>
-          
-        
-          
-            <a
-              href="https://leetcode.com/SriSatyaLokesh"
-              class="contact__social-card"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit my LeetCode profile"
-            >
-              <div class="contact__social-icon" aria-hidden="true">
-                
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
-                  
-              </div>
-
-              <div class="contact__social-info">
-                <span class="contact__social-name">LeetCode</span>
-                <span class="contact__social-handle">leetcode.com/SriSatyaLokesh</span>
+                <span class="contact__social-handle">dev.to</span>
               </div>
 
               <svg class="contact__social-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
@@ -1279,7 +1078,7 @@
   <div class="container footer__inner">
     <div class="footer__left">
       <p class="footer__copy">
-        &copy; 2026 Sri Satya Lokesh. All rights reserved.
+        &copy; 2026 DevFolio. All rights reserved.
       </p>
       <p class="footer__credit">
         Built with <a href="https://github.com/SriSatyaLokesh/devfolio" target="_blank" rel="noopener">DevFolio</a>
@@ -1579,7 +1378,7 @@
 <script>
   (function() {
     const audio = document.getElementById('bg-music');
-    const targetVolume = 0.3;
+    const targetVolume = 1.0;
     let hasStarted = false;
 
     // Fade volume using GSAP
@@ -1612,10 +1411,24 @@
       if (hasStarted) return;
       hasStarted = true;
       
-      audio.volume = 0;
+      audio.volume = 0.5; // Start at audible 50%
       audio.play().then(() => {
-        // Successful play - start 5s cinematic fade
-        window.fadeAudio(targetVolume, 5);
+        // High-Fidelity Cinematic Ramp
+        const tl = gsap.timeline({
+          onComplete: () => updateSoundToggleUI()
+        });
+
+        tl.to(audio, {
+          volume: 0.8,
+          duration: 5,
+          ease: "power2.out"
+        })
+        .to(audio, {
+          volume: targetVolume,
+          duration: 15,
+          ease: "power1.inOut"
+        });
+
       }).catch(err => {
         console.warn("Autoplay blocked, waiting for next interaction or toggle.");
         hasStarted = false; // Reset to try again on next click

@@ -3,7 +3,14 @@
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Portfolio-as-Code — A Jekyll developer portfolio template. Fork, fill JSON, deploy." />
-<title>Sri Satya Lokesh | Portfolio</title>
+<title>DevFolio | Portfolio</title>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/devfolio/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/devfolio/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/devfolio/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/devfolio/assets/img/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/devfolio/assets/img/favicon/favicon.ico">
 
 <!-- FOUC Prevention: inject CSS variables and initial theme before stylesheet loads -->
 <style>
@@ -35,7 +42,9 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="container nav__inner">
     <a href="/devfolio/#hero" class="nav__brand">
-      Sri Satya Lokesh
+      
+        <img src="/devfolio/assets/img/devfolio.png" alt="Logo" class="nav__logo-img">
+      
     </a>
 
     <ul class="nav__links" role="list" id="nav-links">
@@ -188,17 +197,6 @@
           
           
             <article class="blog-card blog-card--span-4">
-              <a href="/devfolio/blog/foundational-design/" class="blog-card__link">
-                <div class="blog-card__content interactive-glow">
-                  <div class="blog-card__image-wrap">
-                    <img src="/devfolio/assets/img/blog-design-2026.png" alt="Foundational Design: Architecting for 2026" class="blog-card__image" loading="lazy">
-                  </div>
-                  <h4 class="blog-card__title">Foundational Design: Architecting for 2026</h4>
-                </div>
-              </a>
-            </article>
-          
-            <article class="blog-card blog-card--span-4">
               <a href="/devfolio/blog/vanta-performance/" class="blog-card__link">
                 <div class="blog-card__content interactive-glow">
                   <div class="blog-card__image-wrap">
@@ -216,6 +214,17 @@
                     <img src="/devfolio/assets/img/blog-revolution.png" alt="DevFolio: The Portfolio-as-Code Revolution" class="blog-card__image" loading="lazy">
                   </div>
                   <h4 class="blog-card__title">DevFolio: The Portfolio-as-Code Revolution</h4>
+                </div>
+              </a>
+            </article>
+          
+            <article class="blog-card blog-card--span-4">
+              <a href="/devfolio/blog/foundational-design/" class="blog-card__link">
+                <div class="blog-card__content interactive-glow">
+                  <div class="blog-card__image-wrap">
+                    <img src="/devfolio/assets/img/blog-design-2026.png" alt="Foundational Design: Architecting for 2026" class="blog-card__image" loading="lazy">
+                  </div>
+                  <h4 class="blog-card__title">Foundational Design: Architecting for 2026</h4>
                 </div>
               </a>
             </article>
@@ -255,7 +264,7 @@
   <div class="container footer__inner">
     <div class="footer__left">
       <p class="footer__copy">
-        &copy; 2026 Sri Satya Lokesh. All rights reserved.
+        &copy; 2026 DevFolio. All rights reserved.
       </p>
       <p class="footer__credit">
         Built with <a href="https://github.com/SriSatyaLokesh/devfolio" target="_blank" rel="noopener">DevFolio</a>
@@ -555,7 +564,7 @@
 <script>
   (function() {
     const audio = document.getElementById('bg-music');
-    const targetVolume = 0.3;
+    const targetVolume = 1.0;
     let hasStarted = false;
 
     // Fade volume using GSAP
@@ -588,10 +597,24 @@
       if (hasStarted) return;
       hasStarted = true;
       
-      audio.volume = 0;
+      audio.volume = 0.5; // Start at audible 50%
       audio.play().then(() => {
-        // Successful play - start 5s cinematic fade
-        window.fadeAudio(targetVolume, 5);
+        // High-Fidelity Cinematic Ramp
+        const tl = gsap.timeline({
+          onComplete: () => updateSoundToggleUI()
+        });
+
+        tl.to(audio, {
+          volume: 0.8,
+          duration: 5,
+          ease: "power2.out"
+        })
+        .to(audio, {
+          volume: targetVolume,
+          duration: 15,
+          ease: "power1.inOut"
+        });
+
       }).catch(err => {
         console.warn("Autoplay blocked, waiting for next interaction or toggle.");
         hasStarted = false; // Reset to try again on next click

@@ -1,14 +1,14 @@
 ---
 ---
 /**
- * DevFolio — main.scss (Modular Architecture)
+ * TheProFile — main.scss (Modular Architecture)
  * -----------------------------------------
  * This is the main orchestrator for the 'Elite 2026' design system.
  * It imports partials from the _sass directory. 
  */
 
 /* 1. External Fonts */
-@import "https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 /* 2. Abstracts (Variables & Mixins) */
 @import "abstracts/variables";
@@ -38,6 +38,3 @@
 
 /* 7. Pages (Blog & Posts) */
 @import "blog";
-
-/* 8. Animations (Keyframes) */
-@import "animations/keyframes";

@@ -128,7 +128,7 @@
     const brand = document.querySelector('.nav__brand');
     if (brand) {
       brand.addEventListener('dblclick', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Stop navigation to allow color cycling in-place
         window.cycleColorPalette();
       });
       brand.addEventListener('mousedown', (e) => {

@@ -95,6 +95,9 @@
    * Main initialization function for Vanta effects.
    */
   window.initVanta = function() {
+    // Guard clause for pages without hero sections (e.g. blog posts)
+    if (!document.getElementById('hero')) return;
+
     if (window.DEV_FOLIO_VANTA_INSTANCE) {
       window.DEV_FOLIO_VANTA_INSTANCE.destroy();
     }

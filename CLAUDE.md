@@ -1,4 +1,4 @@
-# CLAUDE.md — DevFolio Project Context
+# CLAUDE.md — TheProFile Project Context
 
 > Claude Code quick-reference. Read this before touching any file.
 > For full spec: `docs/PRD.md` (what) → `docs/TRD.md` (how) → `AGENTS.md` (rules).
@@ -7,7 +7,7 @@
 
 ## Project Summary
 
-**DevFolio** — Jekyll 4.x, single-page developer portfolio. "Portfolio-as-Code": user edits `_data/profile.json` only. Deployed via GitHub Pages + GitHub Actions.
+**TheProFile** — Jekyll 4.x, single-page developer portfolio. "Portfolio-as-Code": user edits `_data/profile.json` only. Deployed via GitHub Pages + GitHub Actions.
 
 **Status:** All 5 phases implemented. Site is live/functional.
 

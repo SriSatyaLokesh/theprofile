@@ -1,4 +1,4 @@
-# DevFolio Data Configuration Guide
+# TheProFile Data Configuration Guide
 
 > This directory is the brain of your portfolio. By editing `profile.json`, you can control every visual, interaction, and content piece on your site without touching a single line of HTML or CSS.
 

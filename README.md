@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="assets/img/devfolio.png" alt="DevFolio Logo" width="120" height="120">
-  <h1>DevFolio</h1>
+  <img src="assets/img/theprofile.png" alt="TheProFile Logo" width="120" height="120">
+  <h1>TheProFile</h1>
   <p><strong>Portfolio-as-Code. Zero HTML. Maximum Impact.</strong></p>
 
   <p>
@@ -12,14 +12,14 @@
 
 ---
 
-## What is DevFolio?
+## What is TheProFile?
 
-**DevFolio** is a high-fidelity, single-page developer portfolio template built on **Jekyll** and hosted natively on **GitHub Pages**.
+**TheProFile** is a high-fidelity, single-page developer portfolio template built on **Jekyll** and hosted natively on **GitHub Pages**.
 
 It follows the **Portfolio-as-Code** philosophy:
 No dragging-and-dropping. No fighting with CSS specificity. No wrestling with React hydration.
 
-You edit a single `profile.json` file. DevFolio handles the rest.
+You edit a single `profile.json` file. TheProFile handles the rest.
 
 ### ✨ Features
 - 🚀 **Zero-Code Setup**: If you can write JSON, you can build a stunning portfolio.
@@ -41,7 +41,7 @@ You edit a single `profile.json` file. DevFolio handles the rest.
 4. Go to your repository **Settings > Pages**.
 5. Under Build and deployment, change the Source to **GitHub Actions**.
 
-That's it! GitHub Actions will automatically compile your DevFolio and deploy it.
+That's it! GitHub Actions will automatically compile your TheProFile and deploy it.
 
 ---
 

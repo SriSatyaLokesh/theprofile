@@ -1,4 +1,4 @@
-# Technical Requirements Document (TRD): DevFolio
+# Technical Requirements Document (TRD): TheProFile
 
 > **Version:** 1.0  
 > **Last Updated:** 2026-04-12  
@@ -119,7 +119,7 @@ This is the single source of truth. All sections, styles, and links are driven b
   // ─── PROJECTS (max 6 — hard limit) ───────────────────────────────────────
   "projects": [
     {
-      "title": "DevFolio",
+      "title": "TheProFile",
       "description": "A Jekyll-based developer portfolio template.",
       "image_url": "https://...",
       "stack": ["Jekyll", "SCSS", "JavaScript"],
@@ -382,7 +382,7 @@ nav {
 
 ```yaml
 # .github/workflows/deploy.yml
-name: Deploy DevFolio to GitHub Pages
+name: Deploy TheProFile to GitHub Pages
 
 on:
   push:
@@ -415,7 +415,7 @@ jobs:
 ## 12. `_config.yml` — Jekyll Configuration
 
 ```yaml
-title: DevFolio
+title: TheProFile
 description: Portfolio-as-Code — A Jekyll developer portfolio template
 baseurl: "/devfolio"       # Change to "" if using a custom domain
 url: "https://username.github.io"

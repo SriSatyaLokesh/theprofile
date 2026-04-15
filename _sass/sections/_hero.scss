@@ -18,11 +18,16 @@
 }
 
 .hero__name { 
-  font-weight: 700; 
-  background: linear-gradient(135deg, var(--color-text) 30%, var(--color-accent) 100%); 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--color-text) 10%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); 
+  background-clip: text;
 }
 
 .hero__headline {

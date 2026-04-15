@@ -223,6 +223,7 @@ Showcase your best work and praise.
 
 ## Pro Tips
 
-- **Double-Click Badge**: Double-click the "Available for Work" badge to trigger the background randomizer (if `vanta_magic` is enabled).
+- **Double-Click Badge**: Double-click the "Available for Work" badge to sequentially cycle through **Background Effects** (if `vanta_magic` is enabled).
+- **Double-Click Branding**: Double-click the Navbar Logo (Branding) to sequentially cycle through **Elite Color Themes** for a total site makeover.
 - **Cinematic Entrance**: The music starts at 50% and swells to 100% over 20 seconds for maximum impact.
 - **Badge Generation**: Use the `stack_logos` array with Simple Icon names to automatically generate themed tech badges.

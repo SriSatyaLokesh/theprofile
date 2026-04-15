@@ -18,9 +18,10 @@ Any Pull Request that violates these principles will respectfully be declined.
 4. **No local binary assets**: Profile images and project screenshots must be external HTTPS URLs. We do not commit image binaries to the repository.
 5. **6-project hard limit**: The `projects.html` Liquid template always uses `limit:6`. Do not remove this. Users are expected to curate their work.
 6. **Jekyll-native only**: Use only Jekyll 4.x built-in features: Liquid, `_data/`, `_includes/`, `_layouts/`, and SCSS via `jekyll-sass-converter`. No extra Ruby gems.
-7. **No inline styles in templates**: All styling must use CSS Custom Properties defined in `main.scss`. Never write `style="..."` attributes in Liquid templates.
-8. **Semantic & Accessible**: Use valid HTML5 semantic tags and ensure all images have `loading="lazy"` (except above-the-fold hero assets).
-9. **Conditional Vanta loading**: Three.js and Vanta.js script tags must only be injected if `theme_config.vanta_effect` is set and non-empty.
+7. **No inline styles in templates**: All styling must use CSS Custom Properties defined in the design system. Never write `style="..."` attributes in Liquid templates.
+8. **Modular SASS**: All new styles must be added as partials in the `_sass/` directory and imported into `assets/css/main.scss`.
+9. **Semantic & Accessible**: Use valid HTML5 semantic tags and ensure all images have `loading="lazy"` (except above-the-fold hero assets).
+10. **Conditional Vanta loading**: Three.js and Vanta.js script tags must only be injected if `theme_config.vanta_effect` is set and non-empty.
 
 ---
 
@@ -34,7 +35,8 @@ Familiarize yourself with where things live before diving in:
 | `_includes/sections/` | HTML fragments for each section. | Do not put `<style>` blocks in here. Use semantic HTML. |
 | `_includes/badge_gen.html` | Shields.io Badge URL Factory. | All dynamic badges must pass through this file. Do not hardcode Shields.io URLs anywhere. |
 | `_includes/head.html` | CSS Variable Injection. | FOUC (Flash of Unstyled Content) prevention happens here by reading JSON colors into a `:root` block before CSS loads. |
-| `assets/css/main.scss` | Global styling. | Must use `var(--color-primary)` etc. Do not hardcode Hex values besides light-theme overrides. |
+| `_sass/` | Modular SASS partials. | Follow the 7-1 pattern. Add new component styles to the appropriate subfolder. |
+| `assets/css/main.scss` | Global CSS Orchestrator. | Imports all partials. Do not add component styles directly here. |
 
 ---
 

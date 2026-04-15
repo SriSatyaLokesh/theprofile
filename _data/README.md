@@ -8,7 +8,6 @@
 | :--- | :--- |
 | `profile.json` | **Active Configuration**. This is the file you edit. |
 | `profile.example.json` | Template with example data and structure. |
-| `profile.srisatyalokesh.json` | Factual profile of the creator (Sri Satya Lokesh). |
 
 ---
 

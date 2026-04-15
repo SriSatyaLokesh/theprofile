@@ -138,13 +138,13 @@
 
   "recommendations": [
     {
-      "text": "I built DevFolio specifically to solve my own frustration with complex portfolio maintenance. Pro-tip: Double-click the 'Available for opportunities' badge for a little surprise.",
+      "text": "I built TheProFile specifically to solve my own frustration with complex portfolio maintenance. Pro-tip: Double-click the 'Available for opportunities' badge for a little surprise.",
       "name": "SriSatyaLokesh",
-      "title": "Creator of DevFolio",
+      "title": "Creator of TheProFile",
       "linkedin_url": "https://www.linkedin.com/in/srisatyalokesh"
     },
     {
-      "text": "DevFolio is so good, it actually convinced me to stop using React for a simple landing page. My Lighthouse score is 100/100 and my hands are finally clean of node_modules.",
+      "text": "TheProFile is so good, it actually convinced me to stop using React for a simple landing page. My Lighthouse score is 100/100 and my hands are finally clean of node_modules.",
       "name": "A Grateful Developer",
       "title": "Escaped React Dev",
       "linkedin_url": ""

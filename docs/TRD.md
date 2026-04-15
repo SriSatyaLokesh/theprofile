@@ -27,7 +27,7 @@
 ## 2. Directory Structure
 
 ```text
-devfolio/
+TheProFile/
 ├── _data/
 │   ├── profile.json           # THE ONLY FILE users need to edit
 │   └── profile.example.json   # Fully documented example with inline comments
@@ -125,8 +125,8 @@ This is the single source of truth. All sections, styles, and links are driven b
       "stack": ["Jekyll", "SCSS", "JavaScript"],
       "stack_colors": ["CC0000", "1572B6", "F7DF1E"],
       "stack_logos": ["jekyll", "css3", "javascript"],
-      "code_url": "https://github.com/username/devfolio",
-      "live_url": "https://username.github.io/devfolio"
+      "code_url": "https://github.com/username/TheProFile",
+      "live_url": "https://username.github.io/TheProFile"
     }
   ],
 
@@ -417,7 +417,7 @@ jobs:
 ```yaml
 title: TheProFile
 description: Portfolio-as-Code — A Jekyll developer portfolio template
-baseurl: "/devfolio"       # Change to "" if using a custom domain
+baseurl: "/TheProFile"       # Change to "" if using a custom domain
 url: "https://username.github.io"
 
 # Build settings

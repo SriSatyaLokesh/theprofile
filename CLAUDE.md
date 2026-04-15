@@ -31,7 +31,7 @@
 ## Directory Map
 
 ```
-devfolio/
+TheProFile/
 ├── _data/
 │   ├── profile.json          ← USER'S FILE — never overwrite
 │   └── profile.example.json  ← Keep fully documented, all fields
@@ -64,7 +64,7 @@ devfolio/
 │   └── img/
 │       └── projects/         ← Local project screenshots (gitignored binary files)
 │
-├── _config.yml               ← baseurl: /devfolio, sass_dir: _sass (not critical, main.scss has front matter)
+├── _config.yml               ← baseurl: /TheProFile, sass_dir: _sass (not critical, main.scss has front matter)
 ├── index.html                ← layout:default + all section includes
 ├── Gemfile                   ← jekyll ~> 4.3, jekyll-sass-converter ~> 3.0
 └── docs/
@@ -184,7 +184,7 @@ Order: font import → `:root` vars → `[data-theme="light"]` overrides → res
 ## Build & Test
 
 ```bash
-bundle exec jekyll serve        # dev server at http://localhost:4000/devfolio
+bundle exec jekyll serve        # dev server at http://localhost:4000/TheProFile
 bundle exec jekyll build        # production build to _site/
 ```
 

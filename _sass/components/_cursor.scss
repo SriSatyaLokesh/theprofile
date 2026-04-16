@@ -1,0 +1,136 @@
+/**
+ * Cinematic Magnetic Lens Cursor
+ * -----------------------------------------
+ * A high-fidelity focus system featuring a precision core 
+ * and a fluid, scale-shifting lens.
+ */
+
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 11001; /* Above navbar (10000) */
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  will-change: transform, opacity;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Visibility on light backgrounds */
+}
+
+.cursor-outline {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%); /* Concentric with dot */
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 11000; /* Above navbar (10000) */
+  will-change: transform, opacity;
+  transition: opacity 0.3s ease, width 0.4s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 40px;
+  height: 40px;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent); /* Softened border */
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: screen; /* Brightens content underneath */
+
+  /* Blurred cinematic ring effect */
+  box-shadow: 
+    0 0 12px color-mix(in srgb, var(--color-accent) 25%, transparent),
+    inset 0 0 12px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+/* Light Mode Visibility Fix */
+[data-theme="light"] .cursor-outline {
+  mix-blend-mode: multiply; /* Darkens/Saturates content on light backgrounds */
+  border-color: color-mix(in srgb, var(--color-accent) 40%, transparent); /* More opaque */
+  box-shadow: 
+    0 0 15px color-mix(in srgb, var(--color-accent) 30%, transparent),
+    inset 0 0 15px color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
+[data-theme="light"] .cursor-dot {
+  background-color: var(--color-accent);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover State Expansion */
+body.is-hovering {
+  .cursor-dot {
+    opacity: 0.8;
+  }
+
+  .cursor-outline {
+    width: 60px;
+    height: 60px;
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+    border-color: color-mix(in srgb, var(--color-accent) 40%, transparent); /* Diffuse border */
+    box-shadow: 
+      0 0 20px color-mix(in srgb, var(--color-accent) 30%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--color-accent) 30%, transparent);
+  }
+}
+
+/* Project Card Specific Hover - Circular scaling only */
+body.is-hovering-project {
+  .cursor-outline {
+    width: 120px;
+    height: 120px;
+    border-width: 1px;
+    background: color-mix(in srgb, var(--color-accent) 3%, transparent);
+    border-color: color-mix(in srgb, var(--color-accent) 20%, transparent); /* Even softer */
+    filter: blur(1.5px); /* Enhanced cinematic blur */
+    box-shadow: 
+      0 0 30px color-mix(in srgb, var(--color-accent) 40%, transparent),
+      inset 0 0 30px color-mix(in srgb, var(--color-accent) 40%, transparent);
+  }
+}
+
+/* Light Mode Hover Adjustments */
+[data-theme="light"] {
+  body.is-hovering .cursor-outline {
+    mix-blend-mode: multiply;
+    border-color: color-mix(in srgb, var(--color-accent) 60%, transparent);
+    box-shadow: 
+      0 0 25px color-mix(in srgb, var(--color-accent) 40%, transparent),
+      inset 0 0 25px color-mix(in srgb, var(--color-accent) 40%, transparent);
+  }
+
+  body.is-hovering-project .cursor-outline {
+    mix-blend-mode: multiply;
+    border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+    box-shadow: 
+      0 0 40px color-mix(in srgb, var(--color-accent) 50%, transparent),
+      inset 0 0 40px color-mix(in srgb, var(--color-accent) 50%, transparent);
+  }
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (hover: hover) and (pointer: fine) {
+  html.custom-cursor-active {
+    &, body {
+      cursor: none !important;
+    }
+
+    /* Force hide on interactive elements */
+    a, button, [role="button"], .project-card, .social-icon, .hero__cta {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Ensure custom cursor is hidden on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+}
